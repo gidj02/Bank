@@ -39,13 +39,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\account_controller.cs" />
+    <Compile Include="Controller\client_controller.cs" />
+    <Compile Include="Controller\transaction_controller.cs" />
+    <Compile Include="Data Access\account_dataaccess.cs" />
+    <Compile Include="Data Access\client_dataaccess.cs" />
+    <Compile Include="Data Access\transaction_dataaccess.cs" />
+    <Compile Include="Model\account.cs" />
+    <Compile Include="Model\client.cs" />
+    <Compile Include="Model\transaction.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Controller\" />
-    <Folder Include="Data Access\" />
-    <Folder Include="Model\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

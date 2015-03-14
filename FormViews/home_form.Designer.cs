@@ -1,6 +1,6 @@
 ﻿namespace FormViews
 {
-    partial class Form1
+    partial class home_form
     {
         /// <summary>
         /// Required designer variable.

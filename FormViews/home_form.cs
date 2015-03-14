@@ -11,9 +11,9 @@ using MetroFramework.Forms;
 
 namespace FormViews
 {
-    public partial class Form1 : MetroForm
+    public partial class home_form : MetroForm
     {
-        public Form1()
+        public home_form()
         {
             InitializeComponent();
         }
