@@ -57,7 +57,7 @@ namespace MainLibrary.Data_Access
             {
                 setConnection();
             }
-        }
+        }//end of adding client function
 
         public DataTable viewClient()
         {
@@ -88,6 +88,6 @@ namespace MainLibrary.Data_Access
             {
                 setConnection();
             }
-        }
+        }//end of viewing client function
     }
 }
