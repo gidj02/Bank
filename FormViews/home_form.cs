@@ -17,5 +17,10 @@ namespace FormViews
         {
             InitializeComponent();
         }
+
+        private void home_form_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

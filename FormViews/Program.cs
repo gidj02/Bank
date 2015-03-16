@@ -16,7 +16,7 @@ namespace FormViews
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new home_form());
+            Application.Run(new splash_screen());
         }
     }
 }
