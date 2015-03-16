@@ -11,18 +11,11 @@ using System.Windows.Forms;
 
 namespace FormViews
 {
-    public partial class home_form : MetroForm
+    public partial class signup_form : MetroForm
     {
-        public home_form()
+        public signup_form()
         {
             InitializeComponent();
         }
-
-        private void tileDeposit_Click(object sender, EventArgs e)
-        {
- 
-        }
-
-
     }
 }
