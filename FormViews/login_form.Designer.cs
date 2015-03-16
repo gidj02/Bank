@@ -45,7 +45,6 @@
             this.metroLabel1.Size = new System.Drawing.Size(75, 19);
             this.metroLabel1.TabIndex = 0;
             this.metroLabel1.Text = "Account ID:";
-
             // 
             // metroLabel2
             // 
@@ -55,7 +54,6 @@
             this.metroLabel2.Size = new System.Drawing.Size(110, 19);
             this.metroLabel2.TabIndex = 1;
             this.metroLabel2.Text = "6-Digit Pin Code:";
-   
             // 
             // txtAccountID
             // 
@@ -69,7 +67,6 @@
             this.txtAccountID.Size = new System.Drawing.Size(295, 23);
             this.txtAccountID.TabIndex = 2;
             this.txtAccountID.UseSelectable = true;
-         
             // 
             // txtPinCode
             // 
@@ -83,7 +80,6 @@
             this.txtPinCode.Size = new System.Drawing.Size(295, 23);
             this.txtPinCode.TabIndex = 3;
             this.txtPinCode.UseSelectable = true;
-          
             // 
             // btnLogin
             // 
@@ -107,7 +103,6 @@
             this.btnSignUp.TabIndex = 5;
             this.btnSignUp.Text = "Sign Up";
             this.btnSignUp.UseSelectable = true;
-          
             // 
             // metroLabel3
             // 
@@ -136,7 +131,7 @@
             this.Resizable = false;
             this.Text = "Bank Account System";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.login_form_FormClosed);
-         
+            this.Load += new System.EventHandler(this.login_form_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

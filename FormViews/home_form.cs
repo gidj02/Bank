@@ -18,11 +18,16 @@ namespace FormViews
             InitializeComponent();
         }
 
-        private void tileDeposit_Click(object sender, EventArgs e)
+        private void tileActivate_Click(object sender, EventArgs e)
         {
- 
+            login_form login = new login_form();
+            this.Hide();
+            login.Show();
         }
 
-
+        private void home_form_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

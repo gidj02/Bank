@@ -28,121 +28,92 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tileBalance = new MetroFramework.Controls.MetroTile();
-            this.tileDeposit = new MetroFramework.Controls.MetroTile();
-            this.tileProfile = new MetroFramework.Controls.MetroTile();
-            this.tileCheck = new MetroFramework.Controls.MetroTile();
-            this.tileWithdraw = new MetroFramework.Controls.MetroTile();
-            this.lblName = new MetroFramework.Controls.MetroLabel();
+            this.tileActivate = new MetroFramework.Controls.MetroTile();
+            this.tileAccount = new MetroFramework.Controls.MetroTile();
+            this.tileClient = new MetroFramework.Controls.MetroTile();
+            this.tileDeactivate = new MetroFramework.Controls.MetroTile();
             this.SuspendLayout();
             // 
-            // tileBalance
+            // tileActivate
             // 
-            this.tileBalance.ActiveControl = null;
-            this.tileBalance.Location = new System.Drawing.Point(249, 95);
-            this.tileBalance.Name = "tileBalance";
-            this.tileBalance.Size = new System.Drawing.Size(107, 91);
-            this.tileBalance.Style = MetroFramework.MetroColorStyle.Purple;
-            this.tileBalance.TabIndex = 0;
-            this.tileBalance.Text = "Balance";
-            this.tileBalance.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.tileBalance.TileTextFontSize = MetroFramework.MetroTileTextSize.Small;
-            this.tileBalance.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
-            this.tileBalance.UseSelectable = true;
+            this.tileActivate.ActiveControl = null;
+            this.tileActivate.Location = new System.Drawing.Point(249, 196);
+            this.tileActivate.Name = "tileActivate";
+            this.tileActivate.Size = new System.Drawing.Size(220, 200);
+            this.tileActivate.Style = MetroFramework.MetroColorStyle.Teal;
+            this.tileActivate.TabIndex = 7;
+            this.tileActivate.Text = "Login Account";
+            this.tileActivate.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.tileActivate.TileTextFontSize = MetroFramework.MetroTileTextSize.Small;
+            this.tileActivate.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
+            this.tileActivate.UseSelectable = true;
+            this.tileActivate.Click += new System.EventHandler(this.tileActivate_Click);
             // 
-            // tileDeposit
+            // tileAccount
             // 
-            this.tileDeposit.ActiveControl = null;
-            this.tileDeposit.Location = new System.Drawing.Point(23, 95);
-            this.tileDeposit.Name = "tileDeposit";
-            this.tileDeposit.Size = new System.Drawing.Size(220, 200);
-            this.tileDeposit.Style = MetroFramework.MetroColorStyle.Blue;
-            this.tileDeposit.TabIndex = 1;
-            this.tileDeposit.Text = "Deposit";
-            this.tileDeposit.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.tileDeposit.TileTextFontSize = MetroFramework.MetroTileTextSize.Small;
-            this.tileDeposit.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
-            this.tileDeposit.UseSelectable = true;
-            this.tileDeposit.Click += new System.EventHandler(this.tileDeposit_Click);
+            this.tileAccount.ActiveControl = null;
+            this.tileAccount.Location = new System.Drawing.Point(23, 305);
+            this.tileAccount.Name = "tileAccount";
+            this.tileAccount.Size = new System.Drawing.Size(220, 91);
+            this.tileAccount.Style = MetroFramework.MetroColorStyle.Red;
+            this.tileAccount.TabIndex = 6;
+            this.tileAccount.Text = "Open New Account";
+            this.tileAccount.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.tileAccount.TileTextFontSize = MetroFramework.MetroTileTextSize.Small;
+            this.tileAccount.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
+            this.tileAccount.UseSelectable = true;
             // 
-            // tileProfile
+            // tileClient
             // 
-            this.tileProfile.ActiveControl = null;
-            this.tileProfile.Location = new System.Drawing.Point(23, 301);
-            this.tileProfile.Name = "tileProfile";
-            this.tileProfile.Size = new System.Drawing.Size(220, 91);
-            this.tileProfile.Style = MetroFramework.MetroColorStyle.Red;
-            this.tileProfile.TabIndex = 2;
-            this.tileProfile.Text = "Manage Profile";
-            this.tileProfile.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.tileProfile.TileTextFontSize = MetroFramework.MetroTileTextSize.Small;
-            this.tileProfile.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
-            this.tileProfile.UseSelectable = true;
+            this.tileClient.ActiveControl = null;
+            this.tileClient.Location = new System.Drawing.Point(23, 99);
+            this.tileClient.Name = "tileClient";
+            this.tileClient.Size = new System.Drawing.Size(220, 200);
+            this.tileClient.Style = MetroFramework.MetroColorStyle.Blue;
+            this.tileClient.TabIndex = 5;
+            this.tileClient.Text = "Register New Client";
+            this.tileClient.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.tileClient.TileTextFontSize = MetroFramework.MetroTileTextSize.Small;
+            this.tileClient.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
+            this.tileClient.UseSelectable = true;
             // 
-            // tileCheck
+            // tileDeactivate
             // 
-            this.tileCheck.ActiveControl = null;
-            this.tileCheck.Location = new System.Drawing.Point(249, 192);
-            this.tileCheck.Name = "tileCheck";
-            this.tileCheck.Size = new System.Drawing.Size(220, 200);
-            this.tileCheck.Style = MetroFramework.MetroColorStyle.Teal;
-            this.tileCheck.TabIndex = 3;
-            this.tileCheck.Text = "Issue Check";
-            this.tileCheck.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.tileCheck.TileTextFontSize = MetroFramework.MetroTileTextSize.Small;
-            this.tileCheck.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
-            this.tileCheck.UseSelectable = true;
-            // 
-            // tileWithdraw
-            // 
-            this.tileWithdraw.ActiveControl = null;
-            this.tileWithdraw.Location = new System.Drawing.Point(362, 95);
-            this.tileWithdraw.Name = "tileWithdraw";
-            this.tileWithdraw.Size = new System.Drawing.Size(107, 91);
-            this.tileWithdraw.Style = MetroFramework.MetroColorStyle.Green;
-            this.tileWithdraw.TabIndex = 4;
-            this.tileWithdraw.Text = "Withdraw";
-            this.tileWithdraw.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.tileWithdraw.TileTextFontSize = MetroFramework.MetroTileTextSize.Small;
-            this.tileWithdraw.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
-            this.tileWithdraw.UseSelectable = true;
-            // 
-            // lblName
-            // 
-            this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(23, 60);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(82, 19);
-            this.lblName.TabIndex = 5;
-            this.lblName.Text = "Client Name";
+            this.tileDeactivate.ActiveControl = null;
+            this.tileDeactivate.Location = new System.Drawing.Point(249, 99);
+            this.tileDeactivate.Name = "tileDeactivate";
+            this.tileDeactivate.Size = new System.Drawing.Size(220, 91);
+            this.tileDeactivate.Style = MetroFramework.MetroColorStyle.Purple;
+            this.tileDeactivate.TabIndex = 4;
+            this.tileDeactivate.Text = "Help";
+            this.tileDeactivate.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.tileDeactivate.TileTextFontSize = MetroFramework.MetroTileTextSize.Small;
+            this.tileDeactivate.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
+            this.tileDeactivate.UseSelectable = true;
             // 
             // home_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(490, 405);
-            this.Controls.Add(this.lblName);
-            this.Controls.Add(this.tileWithdraw);
-            this.Controls.Add(this.tileCheck);
-            this.Controls.Add(this.tileProfile);
-            this.Controls.Add(this.tileDeposit);
-            this.Controls.Add(this.tileBalance);
+            this.ClientSize = new System.Drawing.Size(495, 418);
+            this.Controls.Add(this.tileActivate);
+            this.Controls.Add(this.tileAccount);
+            this.Controls.Add(this.tileClient);
+            this.Controls.Add(this.tileDeactivate);
             this.MaximizeBox = false;
             this.Name = "home_form";
             this.Resizable = false;
-            this.Text = "Bank Account Sytem";
+            this.Text = "Bank Account System";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.home_form_FormClosed);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private MetroFramework.Controls.MetroTile tileBalance;
-        private MetroFramework.Controls.MetroTile tileDeposit;
-        private MetroFramework.Controls.MetroTile tileProfile;
-        private MetroFramework.Controls.MetroTile tileCheck;
-        private MetroFramework.Controls.MetroTile tileWithdraw;
-        private MetroFramework.Controls.MetroLabel lblName;
+        private MetroFramework.Controls.MetroTile tileActivate;
+        private MetroFramework.Controls.MetroTile tileAccount;
+        private MetroFramework.Controls.MetroTile tileClient;
+        private MetroFramework.Controls.MetroTile tileDeactivate;
     }
 }

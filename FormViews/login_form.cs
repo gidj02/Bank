@@ -28,10 +28,15 @@ namespace FormViews
             //for testing
             if (txtAccountID.Text == "admin" && txtPinCode.Text == "12345")
             {
-                home_form home = new home_form();
+                homeuser_form home = new homeuser_form();
                 home.Show();
                 this.Hide();
             }
+        }
+
+        private void login_form_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
