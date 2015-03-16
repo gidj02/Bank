@@ -38,5 +38,12 @@ namespace FormViews
         {
 
         }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            home_form home = new home_form();
+            home.Show();
+            this.Hide();
+        }
     }
 }

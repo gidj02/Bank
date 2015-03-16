@@ -32,6 +32,7 @@
             this.tileAccount = new MetroFramework.Controls.MetroTile();
             this.tileClient = new MetroFramework.Controls.MetroTile();
             this.tileDeactivate = new MetroFramework.Controls.MetroTile();
+            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.SuspendLayout();
             // 
             // tileActivate
@@ -76,6 +77,7 @@
             this.tileClient.TileTextFontSize = MetroFramework.MetroTileTextSize.Small;
             this.tileClient.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
             this.tileClient.UseSelectable = true;
+            this.tileClient.Click += new System.EventHandler(this.tileClient_Click);
             // 
             // tileDeactivate
             // 
@@ -91,11 +93,22 @@
             this.tileDeactivate.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
             this.tileDeactivate.UseSelectable = true;
             // 
+            // metroLabel3
+            // 
+            this.metroLabel3.AutoSize = true;
+            this.metroLabel3.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel3.Location = new System.Drawing.Point(23, 60);
+            this.metroLabel3.Name = "metroLabel3";
+            this.metroLabel3.Size = new System.Drawing.Size(50, 19);
+            this.metroLabel3.TabIndex = 8;
+            this.metroLabel3.Text = "Home";
+            // 
             // home_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(495, 418);
+            this.Controls.Add(this.metroLabel3);
             this.Controls.Add(this.tileActivate);
             this.Controls.Add(this.tileAccount);
             this.Controls.Add(this.tileClient);
@@ -106,6 +119,7 @@
             this.Text = "Bank Account System";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.home_form_FormClosed);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -115,5 +129,6 @@
         private MetroFramework.Controls.MetroTile tileAccount;
         private MetroFramework.Controls.MetroTile tileClient;
         private MetroFramework.Controls.MetroTile tileDeactivate;
+        private MetroFramework.Controls.MetroLabel metroLabel3;
     }
 }

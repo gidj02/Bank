@@ -33,8 +33,8 @@
             this.txtAccountID = new MetroFramework.Controls.MetroTextBox();
             this.txtPinCode = new MetroFramework.Controls.MetroTextBox();
             this.btnLogin = new MetroFramework.Controls.MetroButton();
-            this.btnSignUp = new MetroFramework.Controls.MetroButton();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
+            this.btnHome = new MetroFramework.Controls.MetroButton();
             this.SuspendLayout();
             // 
             // metroLabel1
@@ -85,24 +85,13 @@
             // 
             this.btnLogin.FontSize = MetroFramework.MetroButtonSize.Tall;
             this.btnLogin.FontWeight = MetroFramework.MetroButtonWeight.Light;
-            this.btnLogin.Location = new System.Drawing.Point(326, 149);
+            this.btnLogin.Location = new System.Drawing.Point(407, 149);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(75, 30);
             this.btnLogin.TabIndex = 4;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseSelectable = true;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
-            // 
-            // btnSignUp
-            // 
-            this.btnSignUp.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.btnSignUp.FontWeight = MetroFramework.MetroButtonWeight.Light;
-            this.btnSignUp.Location = new System.Drawing.Point(407, 149);
-            this.btnSignUp.Name = "btnSignUp";
-            this.btnSignUp.Size = new System.Drawing.Size(75, 30);
-            this.btnSignUp.TabIndex = 5;
-            this.btnSignUp.Text = "Sign Up";
-            this.btnSignUp.UseSelectable = true;
             // 
             // metroLabel3
             // 
@@ -114,13 +103,24 @@
             this.metroLabel3.TabIndex = 6;
             this.metroLabel3.Text = "Login Account";
             // 
+            // btnHome
+            // 
+            this.btnHome.FontWeight = MetroFramework.MetroButtonWeight.Regular;
+            this.btnHome.Location = new System.Drawing.Point(11, 171);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(55, 22);
+            this.btnHome.TabIndex = 7;
+            this.btnHome.Text = "Home";
+            this.btnHome.UseSelectable = true;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
+            // 
             // login_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(547, 202);
+            this.ClientSize = new System.Drawing.Size(504, 202);
+            this.Controls.Add(this.btnHome);
             this.Controls.Add(this.metroLabel3);
-            this.Controls.Add(this.btnSignUp);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.txtPinCode);
             this.Controls.Add(this.txtAccountID);
@@ -144,8 +144,8 @@
         private MetroFramework.Controls.MetroTextBox txtAccountID;
         private MetroFramework.Controls.MetroTextBox txtPinCode;
         private MetroFramework.Controls.MetroButton btnLogin;
-        private MetroFramework.Controls.MetroButton btnSignUp;
         private MetroFramework.Controls.MetroLabel metroLabel3;
+        private MetroFramework.Controls.MetroButton btnHome;
 
     }
 }

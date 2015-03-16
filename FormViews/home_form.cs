@@ -29,5 +29,12 @@ namespace FormViews
         {
             Application.Exit();
         }
+
+        private void tileClient_Click(object sender, EventArgs e)
+        {
+            newclient_form client = new newclient_form();
+            this.Hide();
+            client.Show();
+        }
     }
 }
