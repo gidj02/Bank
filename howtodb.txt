@@ -1,0 +1,9 @@
+Import Database
+-Create BookDB database
+-New Query then copy paste laman ng scripts.sql
+-Execute
+
+Export
+-rightclick BookDB
+-select Tasks>Generate Scripts
+-follow wizard shit and produce scripts.sql
