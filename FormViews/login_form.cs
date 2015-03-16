@@ -18,9 +18,20 @@ namespace FormViews
             InitializeComponent();
         }
 
-        private void home_form_FormClosed(object sender, FormClosedEventArgs e)
+        private void login_form_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            //for testing
+            if (txtAccountID.Text == "admin" && txtPinCode.Text == "12345")
+            {
+                home_form home = new home_form();
+                home.Show();
+                this.Hide();
+            }
         }
     }
 }

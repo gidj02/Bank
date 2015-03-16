@@ -35,8 +35,8 @@ namespace FormViews
             //after 3 sec stop the timer
             tmr.Stop();
             //display mainform
-            login_form home = new login_form();
-            home.Show();
+            login_form login = new login_form();
+            login.Show();
             //hide this form
             this.Hide();
         }

@@ -89,6 +89,7 @@
             this.btnLogin.TabIndex = 4;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseSelectable = true;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // login_form
             // 
@@ -102,7 +103,7 @@
             this.Controls.Add(this.metroLabel1);
             this.Name = "login_form";
             this.Text = "Bank Account System";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.home_form_FormClosed);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.login_form_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 

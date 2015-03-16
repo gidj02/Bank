@@ -53,6 +53,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="home_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="home_form.Designer.cs">
+      <DependentUpon>home_form.cs</DependentUpon>
+    </Compile>
     <Compile Include="login_form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,6 +73,9 @@
     <Compile Include="splash_screen.Designer.cs">
       <DependentUpon>splash_screen.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="home_form.resx">
+      <DependentUpon>home_form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="login_form.resx">
       <DependentUpon>login_form.cs</DependentUpon>
     </EmbeddedResource>
