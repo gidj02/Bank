@@ -20,7 +20,7 @@ namespace FormViews
 
         private void tileActivate_Click(object sender, EventArgs e)
         {
-            login_form login = new login_form();
+            loginaccount_form login = new loginaccount_form();
             this.Hide();
             login.Show();
         }
@@ -33,6 +33,13 @@ namespace FormViews
         private void tileClient_Click(object sender, EventArgs e)
         {
             newclient_form client = new newclient_form();
+            this.Hide();
+            client.Show();
+        }
+
+        private void tileAccount_Click(object sender, EventArgs e)
+        {
+            loginclient_form client = new loginclient_form();
             this.Hide();
             client.Show();
         }

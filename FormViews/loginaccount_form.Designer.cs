@@ -1,6 +1,6 @@
 ﻿namespace FormViews
 {
-    partial class login_form
+    partial class loginaccount_form
     {
         /// <summary>
         /// Required designer variable.
@@ -114,7 +114,7 @@
             this.btnHome.UseSelectable = true;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
-            // login_form
+            // loginaccount_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -127,8 +127,9 @@
             this.Controls.Add(this.metroLabel2);
             this.Controls.Add(this.metroLabel1);
             this.MinimizeBox = false;
-            this.Name = "login_form";
+            this.Name = "loginaccount_form";
             this.Resizable = false;
+            this.ShadowType = MetroFramework.Forms.MetroFormShadowType.DropShadow;
             this.Text = "Bank Account System";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.login_form_FormClosed);
             this.Load += new System.EventHandler(this.login_form_Load);

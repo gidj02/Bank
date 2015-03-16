@@ -76,6 +76,8 @@
             this.Controls.Add(this.metroLabel2);
             this.Controls.Add(this.metroLabel1);
             this.Name = "splash_screen";
+            this.ShadowType = MetroFramework.Forms.MetroFormShadowType.DropShadow;
+            this.ShowInTaskbar = false;
             this.Shown += new System.EventHandler(this.splash_screen_Shown);
             this.ResumeLayout(false);
             this.PerformLayout();

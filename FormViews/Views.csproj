@@ -59,11 +59,23 @@
     <Compile Include="homeuser_form.Designer.cs">
       <DependentUpon>homeuser_form.cs</DependentUpon>
     </Compile>
-    <Compile Include="login_form.cs">
+    <Compile Include="loginaccount_form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="login_form.Designer.cs">
-      <DependentUpon>login_form.cs</DependentUpon>
+    <Compile Include="loginaccount_form.Designer.cs">
+      <DependentUpon>loginaccount_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="loginclient_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="loginclient_form.Designer.cs">
+      <DependentUpon>loginclient_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="newaccount_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="newaccount_form.Designer.cs">
+      <DependentUpon>newaccount_form.cs</DependentUpon>
     </Compile>
     <Compile Include="newclient_form.cs">
       <SubType>Form</SubType>
@@ -88,8 +100,14 @@
     <EmbeddedResource Include="homeuser_form.resx">
       <DependentUpon>homeuser_form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="login_form.resx">
-      <DependentUpon>login_form.cs</DependentUpon>
+    <EmbeddedResource Include="loginaccount_form.resx">
+      <DependentUpon>loginaccount_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="loginclient_form.resx">
+      <DependentUpon>loginclient_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="newaccount_form.resx">
+      <DependentUpon>newaccount_form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="newclient_form.resx">
       <DependentUpon>newclient_form.cs</DependentUpon>

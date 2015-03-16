@@ -63,6 +63,7 @@
             this.tileAccount.TileTextFontSize = MetroFramework.MetroTileTextSize.Small;
             this.tileAccount.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
             this.tileAccount.UseSelectable = true;
+            this.tileAccount.Click += new System.EventHandler(this.tileAccount_Click);
             // 
             // tileClient
             // 
@@ -116,6 +117,7 @@
             this.MaximizeBox = false;
             this.Name = "home_form";
             this.Resizable = false;
+            this.ShadowType = MetroFramework.Forms.MetroFormShadowType.DropShadow;
             this.Text = "Bank Account System";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.home_form_FormClosed);
             this.ResumeLayout(false);
