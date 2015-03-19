@@ -1,4 +1,4 @@
-﻿using MetroFramework.Forms;
+﻿using MaterialSkin.Controls;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,11 +11,16 @@ using System.Windows.Forms;
 
 namespace FormViews
 {
-    public partial class newaccount_form : MetroForm
+    public partial class newaccount_form : MaterialForm
     {
         public newaccount_form()
         {
             InitializeComponent();
+        }
+
+        private void newaccount_form_Load(object sender, EventArgs e)
+        {
+
         }
 
 

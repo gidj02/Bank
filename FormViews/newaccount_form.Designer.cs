@@ -37,9 +37,8 @@
             this.ClientSize = new System.Drawing.Size(516, 219);
             this.MaximizeBox = false;
             this.Name = "newaccount_form";
-            this.Resizable = false;
-            this.ShadowType = MetroFramework.Forms.MetroFormShadowType.DropShadow;
             this.Text = "Bank Account System";
+            this.Load += new System.EventHandler(this.newaccount_form_Load);
             this.ResumeLayout(false);
 
         }
