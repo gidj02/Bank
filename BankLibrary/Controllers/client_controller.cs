@@ -16,10 +16,10 @@ namespace BankLibrary.Controllers
         {
             return clientda.checkClientLogin(username, password);
         }
-
-        public List<client> getClient()
+        public client getClient()
         {
             return this.clientda.getClient();
         }
     }
 }
+

@@ -8,6 +8,7 @@ namespace BankLibrary.Models
 {
     public class client
     {
+        public int clientid { get; set; }
         public string firstname { get; set; }
         public string middlename { get; set; }
         public string lastname { get; set; }

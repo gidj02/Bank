@@ -31,7 +31,6 @@
             this.txtPin = new MetroFramework.Controls.MetroTextBox();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.btnSubmit = new MaterialSkin.Controls.MaterialFlatButton();
-            this.btnBack = new MaterialSkin.Controls.MaterialFlatButton();
             this.SuspendLayout();
             // 
             // txtPin
@@ -63,40 +62,25 @@
             // 
             // btnSubmit
             // 
+            this.btnSubmit.AutoSize = true;
             this.btnSubmit.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnSubmit.Depth = 0;
-            this.btnSubmit.Location = new System.Drawing.Point(121, 114);
+            this.btnSubmit.Location = new System.Drawing.Point(158, 114);
             this.btnSubmit.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnSubmit.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Primary = false;
-            this.btnSubmit.Size = new System.Drawing.Size(79, 36);
+            this.btnSubmit.Size = new System.Drawing.Size(62, 36);
             this.btnSubmit.TabIndex = 7;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = true;
             this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
-            // 
-            // btnBack
-            // 
-            this.btnBack.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnBack.Depth = 0;
-            this.btnBack.Location = new System.Drawing.Point(208, 114);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnBack.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Primary = false;
-            this.btnBack.Size = new System.Drawing.Size(79, 36);
-            this.btnBack.TabIndex = 8;
-            this.btnBack.Text = "Back";
-            this.btnBack.UseVisualStyleBackColor = true;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // pin_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(385, 165);
-            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.txtPin);
             this.Controls.Add(this.materialLabel1);
@@ -116,6 +100,5 @@
         private MetroFramework.Controls.MetroTextBox txtPin;
         private MaterialSkin.Controls.MaterialLabel materialLabel1;
         private MaterialSkin.Controls.MaterialFlatButton btnSubmit;
-        private MaterialSkin.Controls.MaterialFlatButton btnBack;
     }
 }

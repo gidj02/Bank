@@ -38,13 +38,8 @@ namespace Views
 
             if (clientcon.checkClientLogin(username, password))
             {
-                List<client> client = clientcon.getClient();
-                foreach (client c in client)
-                {
-                    MessageBox.Show(c.address);
-                }
-                
-                client_form userform = new client_form(username);
+                client client = clientcon.getClient();
+                client_form userform = new client_form(client);
                 userform.Show();
                 this.Dispose();
             }

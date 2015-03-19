@@ -8,24 +8,27 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BankLibrary.Models;
+using BankLibrary.DataAccess;
+using BankLibrary.Controllers;
 
 namespace Views
 {
     public partial class pin_form : MaterialForm
     {
-        string acconumber = string.Empty;
-        string username = string.Empty;
+        account_controller accountcon = new account_controller();
+
+        int accoid;
 
         public pin_form()
         {
             InitializeComponent();
         }
 
-        public pin_form(string acconumber, string username)
+        public pin_form(int accoid)
         {
             InitializeComponent();
-            this.acconumber = acconumber;
-            this.username = username;
+            this.accoid = accoid;
         }
 
         private void pin_form_Load(object sender, EventArgs e)
@@ -35,23 +38,18 @@ namespace Views
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            /*if (txtPin.Text == acconumber)
+            if (accountcon.checkPin(txtPin.Text, accoid))
             {
-                
+                MessageBox.Show("Account Logged In!");
             }
             else
             {
-                MessageBox.Show("Invalid Pin Code");
-            }*/
-            transac_form transac = new transac_form();
+                MessageBox.Show("Account Login Failed!");
+                txtPin.Text = "";
+            }
+            /*transac_form transac = new transac_form();
             transac.Show();
-            this.Dispose();
-        }
-
-        private void btnBack_Click(object sender, EventArgs e)
-        {
-            new client_form(username).Show();
-            this.Dispose();
+            this.Dispose();*/
         }
     }
 }

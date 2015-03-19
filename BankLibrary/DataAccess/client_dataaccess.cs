@@ -13,7 +13,7 @@ namespace BankLibrary.DataAccess
     {
         private static string connStr = @"Data Source=.; Integrated Security=TRUE; Initial Catalog= DBBank;";
         public SqlConnection conn = new SqlConnection(connStr);
-        List<client> client = new List<client>();
+        client client;
 
         public void setConnection()
         {
@@ -88,6 +88,7 @@ namespace BankLibrary.DataAccess
                 while (reader.Read())
                 {
                     client c = new client(){
+                        clientid = (int)reader["clientid"],
                         firstname = reader["firstName"].ToString(),
                         middlename = reader["middleName"].ToString(),
                         lastname = reader["lastName"].ToString(),
@@ -97,7 +98,7 @@ namespace BankLibrary.DataAccess
                         username = reader["userName"].ToString(),
                         password = reader["password"].ToString()
                     };
-                    client.Add(c);
+                    client = c;
                 }
             }
             catch (Exception)
@@ -110,7 +111,7 @@ namespace BankLibrary.DataAccess
             }
         }
     
-        public List<client> getClient()
+        public client getClient()
         {
             return this.client;
         }
