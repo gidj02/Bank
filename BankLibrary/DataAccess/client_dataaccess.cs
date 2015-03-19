@@ -80,7 +80,8 @@ namespace BankLibrary.DataAccess
             try
             {
                 setConnection();
-                SqlCommand cmd = new SqlCommand("Select * from clientTable WHERE userName = @username", conn);
+                SqlCommand cmd = new SqlCommand("getUser", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.Add("@username", SqlDbType.NVarChar).Value = username;
                 SqlDataReader reader = cmd.ExecuteReader();
 
