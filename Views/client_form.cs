@@ -11,16 +11,16 @@ using System.Windows.Forms;
 
 namespace Views
 {
-    public partial class user_form : MaterialForm
+    public partial class client_form : MaterialForm
     {
         string username = string.Empty;
 
-        public user_form()
+        public client_form()
         {
             InitializeComponent();
         }
 
-        public user_form(string username)
+        public client_form(string username)
         {
             InitializeComponent();
             lblWelcome.Text = "Welcome " + username;
@@ -34,6 +34,13 @@ namespace Views
         private void user_form_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void materialFlatButton1_Click(object sender, EventArgs e)
+        {
+            pin_form pinForm = new pin_form();
+            pinForm.Show();
+            this.Dispose();
         }
     }
 }

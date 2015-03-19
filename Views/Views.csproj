@@ -83,11 +83,11 @@
     <Compile Include="transac_form.Designer.cs">
       <DependentUpon>transac_form.cs</DependentUpon>
     </Compile>
-    <Compile Include="user_form.cs">
+    <Compile Include="client_form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="user_form.Designer.cs">
-      <DependentUpon>user_form.cs</DependentUpon>
+    <Compile Include="client_form.Designer.cs">
+      <DependentUpon>client_form.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="home_form.resx">
       <DependentUpon>home_form.cs</DependentUpon>
@@ -110,8 +110,8 @@
     <EmbeddedResource Include="transac_form.resx">
       <DependentUpon>transac_form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="user_form.resx">
-      <DependentUpon>user_form.cs</DependentUpon>
+    <EmbeddedResource Include="client_form.resx">
+      <DependentUpon>client_form.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -125,6 +125,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BankLibrary\BankLibrary.csproj">
+      <Project>{00989a8f-8c14-4192-b323-8f1da6a60b0e}</Project>
+      <Name>BankLibrary</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

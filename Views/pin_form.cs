@@ -50,7 +50,7 @@ namespace Views
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            new user_form(username).Show();
+            new client_form(username).Show();
             this.Dispose();
         }
     }
