@@ -41,8 +41,10 @@
   <ItemGroup>
     <Compile Include="Controllers\account_controller.cs" />
     <Compile Include="Controllers\client_controller.cs" />
+    <Compile Include="Controllers\transaction_controller.cs" />
     <Compile Include="DataAccess\account_dataaccess.cs" />
     <Compile Include="DataAccess\client_dataaccess.cs" />
+    <Compile Include="DataAccess\transaction_dataaccess.cs" />
     <Compile Include="Models\account.cs" />
     <Compile Include="Models\client.cs" />
     <Compile Include="Models\loan_balance.cs" />

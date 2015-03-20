@@ -33,24 +33,9 @@ namespace BankLibrary.Controllers
             return this.account.checkPin(pincode, accoid);
         }
 
-        public void setBalanceandLoan(int accoid)
+        public bool createAccount(int clientid, string pin, decimal deposit)
         {
-            this.account.setBalanceandLoan(accoid);
-        }
-
-        public loan_balance getBalanceandLoan() 
-        {
-            return this.account.getBalanceandLoan();
-        }
-
-        public bool clientWithdraw(int accoid, decimal amount)
-        {
-            return this.account.clientWithdraw(accoid, amount);
-        }
-
-        public bool clientDeposit(int accoid, decimal amount)
-        {
-            return this.account.clientDeposit(accoid, amount);
+            return this.account.createAccount(clientid, pin, deposit);
         }
     }
 }

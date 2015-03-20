@@ -18,11 +18,10 @@ namespace Views
     public partial class transac_form : MaterialForm
     {
         account_controller accountcon = new account_controller();
+        transaction_controller transcon = new transaction_controller();
         
         account account;
         loan_balance loanbalance;
-        char transacType;
-
 
         public transac_form()
         {
@@ -37,62 +36,57 @@ namespace Views
 
         private void transac_form_Load(object sender, EventArgs e)
         {
-            accountcon.setBalanceandLoan(this.account.accountid);
-            updateLoanandBalance();
-        }
-
-        
-        private void btnWithdraw_Click(object sender, EventArgs e)
-        {
-            transacType = 'w';
-
-        }
-
-        private void btnDeposit_Click(object sender, EventArgs e)
-        {
-            transacType = 'd';
-        }
-
-        private void btnEncashment_Click(object sender, EventArgs e)
-        {
-            transacType = 'e';
-        }
-
-        private void btnSubmit_Click(object sender, EventArgs e)
-        {
-            switch (transacType)
-            {
-                case 'w': 
-                    if (accountcon.clientWithdraw(this.account.accountid, Convert.ToDecimal(txtAmount.Text)))
-                    {
-                        MessageBox.Show("Withdrawal Success!");
-                    }
-                    else
-                    {
-                        MessageBox.Show("Withdrawal Failed!");
-                    }
-                    break;
-                case 'd':
-                    if (accountcon.clientDeposit(this.account.accountid, Convert.ToDecimal(txtAmount.Text)))
-                    {
-                        MessageBox.Show("Deposit Success!");
-                    }
-                    else
-                    {
-                        MessageBox.Show("Deposit Failed!");
-                    }
-                    break;
-                case 'e': break;
-            }
-
+            transcon.setBalanceandLoan(this.account.accountid);
             updateLoanandBalance();
         }
 
         public void updateLoanandBalance()
         {
-            loanbalance = accountcon.getBalanceandLoan();
+            loanbalance = transcon.getBalanceandLoan();
             lblBalance.Text = "Balance: " + loanbalance.balanceAmount.ToString();
             lblLoan.Text = "Loan: " + loanbalance.loanAmount.ToString();
+        }
+
+        private void btnWithdraw_Click_1(object sender, EventArgs e)
+        {
+            if (transcon.clientWithdraw(this.account.accountid, Convert.ToDecimal(txtWithdraw.Text)))
+            {
+                MessageBox.Show("Withdrawal Success!");
+                updateLoanandBalance();
+                txtWithdraw.Text = "";
+            }
+            else
+            {
+                MessageBox.Show("Withdrawal Failed!");
+            }
+        }
+
+        private void btnDeposit_Click_1(object sender, EventArgs e)
+        {
+            if (transcon.clientDeposit(this.account.accountid, Convert.ToDecimal(txtDeposit.Text)))
+            {
+                MessageBox.Show("Deposit Success!");
+                txtDeposit.Text = "";
+                updateLoanandBalance();
+            }
+            else
+            {
+                MessageBox.Show("Deposit Failed!");
+            }
+        }
+
+        private void btnEncash_Click(object sender, EventArgs e)
+        {
+            if (transcon.clientEncash(this.account.accountid, Convert.ToDecimal(txtEncash.Text)))
+            {
+                MessageBox.Show("Encashment Success!");
+                updateLoanandBalance();
+                txtEncash.Text = "";
+            }
+            else
+            {
+                MessageBox.Show("Encashment Failed!");
+            }
         }
     }
 }

@@ -28,123 +28,46 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnWithdraw = new MaterialSkin.Controls.MaterialFlatButton();
-            this.btnDeposit = new MaterialSkin.Controls.MaterialFlatButton();
-            this.btnEncashment = new MaterialSkin.Controls.MaterialFlatButton();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btnSubmit = new MaterialSkin.Controls.MaterialFlatButton();
-            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.txtAmount = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.lblBalance = new MetroFramework.Controls.MetroLabel();
             this.lblLoan = new MetroFramework.Controls.MetroLabel();
-            this.panel1.SuspendLayout();
+            this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
+            this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
+            this.btnWithdraw = new MaterialSkin.Controls.MaterialFlatButton();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.txtWithdraw = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel16 = new MetroFramework.Controls.MetroLabel();
+            this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
+            this.btnDeposit = new MaterialSkin.Controls.MaterialFlatButton();
+            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
+            this.txtDeposit = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
+            this.metroTabPage3 = new MetroFramework.Controls.MetroTabPage();
+            this.btnEncash = new MaterialSkin.Controls.MaterialFlatButton();
+            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
+            this.txtEncash = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
+            this.metroTabPage4 = new MetroFramework.Controls.MetroTabPage();
+            this.txtOldPin = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel15 = new MetroFramework.Controls.MetroLabel();
+            this.btnChangePin = new MaterialSkin.Controls.MaterialFlatButton();
+            this.txtNewPin = new MetroFramework.Controls.MetroTextBox();
+            this.txtConfirmPin = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel10 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
+            this.metroTabPage5 = new MetroFramework.Controls.MetroTabPage();
+            this.txtDelPass = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
+            this.txtDelPin = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
+            this.btnDeleteAccount = new MaterialSkin.Controls.MaterialFlatButton();
+            this.metroTabControl1.SuspendLayout();
+            this.metroTabPage1.SuspendLayout();
+            this.metroTabPage2.SuspendLayout();
+            this.metroTabPage3.SuspendLayout();
+            this.metroTabPage4.SuspendLayout();
+            this.metroTabPage5.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // btnWithdraw
-            // 
-            this.btnWithdraw.AutoSize = true;
-            this.btnWithdraw.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnWithdraw.BackColor = System.Drawing.Color.Maroon;
-            this.btnWithdraw.Depth = 0;
-            this.btnWithdraw.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnWithdraw.Location = new System.Drawing.Point(14, 125);
-            this.btnWithdraw.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnWithdraw.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnWithdraw.Name = "btnWithdraw";
-            this.btnWithdraw.Primary = false;
-            this.btnWithdraw.Size = new System.Drawing.Size(85, 36);
-            this.btnWithdraw.TabIndex = 0;
-            this.btnWithdraw.Text = "Withdraw";
-            this.btnWithdraw.UseVisualStyleBackColor = false;
-            this.btnWithdraw.Click += new System.EventHandler(this.btnWithdraw_Click);
-            // 
-            // btnDeposit
-            // 
-            this.btnDeposit.AutoSize = true;
-            this.btnDeposit.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnDeposit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(239)))));
-            this.btnDeposit.Depth = 0;
-            this.btnDeposit.Location = new System.Drawing.Point(107, 125);
-            this.btnDeposit.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnDeposit.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnDeposit.Name = "btnDeposit";
-            this.btnDeposit.Primary = false;
-            this.btnDeposit.Size = new System.Drawing.Size(67, 36);
-            this.btnDeposit.TabIndex = 1;
-            this.btnDeposit.Text = "Deposit";
-            this.btnDeposit.UseVisualStyleBackColor = false;
-            this.btnDeposit.Click += new System.EventHandler(this.btnDeposit_Click);
-            // 
-            // btnEncashment
-            // 
-            this.btnEncashment.AutoSize = true;
-            this.btnEncashment.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnEncashment.Depth = 0;
-            this.btnEncashment.Location = new System.Drawing.Point(182, 125);
-            this.btnEncashment.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnEncashment.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnEncashment.Name = "btnEncashment";
-            this.btnEncashment.Primary = false;
-            this.btnEncashment.Size = new System.Drawing.Size(103, 36);
-            this.btnEncashment.TabIndex = 2;
-            this.btnEncashment.Text = "Encashment";
-            this.btnEncashment.UseVisualStyleBackColor = true;
-            this.btnEncashment.Click += new System.EventHandler(this.btnEncashment_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.btnSubmit);
-            this.panel1.Controls.Add(this.metroLabel1);
-            this.panel1.Controls.Add(this.txtAmount);
-            this.panel1.Location = new System.Drawing.Point(14, 170);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(458, 165);
-            this.panel1.TabIndex = 3;
-            // 
-            // btnSubmit
-            // 
-            this.btnSubmit.AutoSize = true;
-            this.btnSubmit.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnSubmit.BackColor = System.Drawing.Color.Aqua;
-            this.btnSubmit.Depth = 0;
-            this.btnSubmit.Location = new System.Drawing.Point(246, 58);
-            this.btnSubmit.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnSubmit.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Primary = false;
-            this.btnSubmit.Size = new System.Drawing.Size(62, 36);
-            this.btnSubmit.TabIndex = 2;
-            this.btnSubmit.Text = "Submit";
-            this.btnSubmit.UseVisualStyleBackColor = false;
-            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
-            // 
-            // metroLabel1
-            // 
-            this.metroLabel1.AutoSize = true;
-            this.metroLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel1.ForeColor = System.Drawing.Color.White;
-            this.metroLabel1.Location = new System.Drawing.Point(98, 27);
-            this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(82, 19);
-            this.metroLabel1.TabIndex = 1;
-            this.metroLabel1.Text = "Enter Value:";
-            this.metroLabel1.UseCustomBackColor = true;
-            this.metroLabel1.UseCustomForeColor = true;
-            // 
-            // txtAmount
-            // 
-            this.txtAmount.Lines = new string[0];
-            this.txtAmount.Location = new System.Drawing.Point(186, 26);
-            this.txtAmount.MaxLength = 32767;
-            this.txtAmount.Name = "txtAmount";
-            this.txtAmount.PasswordChar = '\0';
-            this.txtAmount.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtAmount.SelectedText = "";
-            this.txtAmount.Size = new System.Drawing.Size(178, 23);
-            this.txtAmount.TabIndex = 0;
-            this.txtAmount.UseSelectable = true;
             // 
             // metroLabel2
             // 
@@ -177,27 +100,429 @@
             this.lblLoan.TabIndex = 6;
             this.lblLoan.Text = "Current Loan: 1500.00";
             // 
+            // metroTabControl1
+            // 
+            this.metroTabControl1.Controls.Add(this.metroTabPage1);
+            this.metroTabControl1.Controls.Add(this.metroTabPage2);
+            this.metroTabControl1.Controls.Add(this.metroTabPage3);
+            this.metroTabControl1.Controls.Add(this.metroTabPage4);
+            this.metroTabControl1.Controls.Add(this.metroTabPage5);
+            this.metroTabControl1.Location = new System.Drawing.Point(12, 126);
+            this.metroTabControl1.Name = "metroTabControl1";
+            this.metroTabControl1.SelectedIndex = 4;
+            this.metroTabControl1.Size = new System.Drawing.Size(518, 234);
+            this.metroTabControl1.TabIndex = 7;
+            this.metroTabControl1.UseSelectable = true;
+            // 
+            // metroTabPage1
+            // 
+            this.metroTabPage1.Controls.Add(this.btnWithdraw);
+            this.metroTabPage1.Controls.Add(this.metroLabel1);
+            this.metroTabPage1.Controls.Add(this.txtWithdraw);
+            this.metroTabPage1.Controls.Add(this.metroLabel16);
+            this.metroTabPage1.HorizontalScrollbarBarColor = true;
+            this.metroTabPage1.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroTabPage1.HorizontalScrollbarSize = 10;
+            this.metroTabPage1.Location = new System.Drawing.Point(4, 38);
+            this.metroTabPage1.Name = "metroTabPage1";
+            this.metroTabPage1.Size = new System.Drawing.Size(510, 192);
+            this.metroTabPage1.TabIndex = 0;
+            this.metroTabPage1.Text = "Withdraw";
+            this.metroTabPage1.VerticalScrollbarBarColor = true;
+            this.metroTabPage1.VerticalScrollbarHighlightOnWheel = false;
+            this.metroTabPage1.VerticalScrollbarSize = 10;
+            // 
+            // btnWithdraw
+            // 
+            this.btnWithdraw.AutoSize = true;
+            this.btnWithdraw.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnWithdraw.Depth = 0;
+            this.btnWithdraw.Location = new System.Drawing.Point(222, 107);
+            this.btnWithdraw.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnWithdraw.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnWithdraw.Name = "btnWithdraw";
+            this.btnWithdraw.Primary = false;
+            this.btnWithdraw.Size = new System.Drawing.Size(85, 36);
+            this.btnWithdraw.TabIndex = 45;
+            this.btnWithdraw.Text = "WITHDRAW";
+            this.btnWithdraw.UseVisualStyleBackColor = true;
+            this.btnWithdraw.Click += new System.EventHandler(this.btnWithdraw_Click_1);
+            // 
+            // metroLabel1
+            // 
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.metroLabel1.Location = new System.Drawing.Point(3, 17);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(206, 19);
+            this.metroLabel1.TabIndex = 44;
+            this.metroLabel1.Text = "Getting cash from your account.";
+            // 
+            // txtWithdraw
+            // 
+            this.txtWithdraw.Lines = new string[0];
+            this.txtWithdraw.Location = new System.Drawing.Point(222, 63);
+            this.txtWithdraw.MaxLength = 32767;
+            this.txtWithdraw.Name = "txtWithdraw";
+            this.txtWithdraw.PasswordChar = '\0';
+            this.txtWithdraw.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtWithdraw.SelectedText = "";
+            this.txtWithdraw.Size = new System.Drawing.Size(199, 23);
+            this.txtWithdraw.TabIndex = 43;
+            this.txtWithdraw.UseSelectable = true;
+            // 
+            // metroLabel16
+            // 
+            this.metroLabel16.AutoSize = true;
+            this.metroLabel16.Location = new System.Drawing.Point(77, 67);
+            this.metroLabel16.Name = "metroLabel16";
+            this.metroLabel16.Size = new System.Drawing.Size(129, 19);
+            this.metroLabel16.TabIndex = 42;
+            this.metroLabel16.Text = "Withdrawal Amount:";
+            // 
+            // metroTabPage2
+            // 
+            this.metroTabPage2.AutoScroll = true;
+            this.metroTabPage2.Controls.Add(this.btnDeposit);
+            this.metroTabPage2.Controls.Add(this.metroLabel3);
+            this.metroTabPage2.Controls.Add(this.txtDeposit);
+            this.metroTabPage2.Controls.Add(this.metroLabel4);
+            this.metroTabPage2.HorizontalScrollbar = true;
+            this.metroTabPage2.HorizontalScrollbarBarColor = true;
+            this.metroTabPage2.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroTabPage2.HorizontalScrollbarSize = 10;
+            this.metroTabPage2.Location = new System.Drawing.Point(4, 38);
+            this.metroTabPage2.Name = "metroTabPage2";
+            this.metroTabPage2.Size = new System.Drawing.Size(510, 192);
+            this.metroTabPage2.TabIndex = 1;
+            this.metroTabPage2.Text = "Deposit";
+            this.metroTabPage2.VerticalScrollbar = true;
+            this.metroTabPage2.VerticalScrollbarBarColor = true;
+            this.metroTabPage2.VerticalScrollbarHighlightOnWheel = false;
+            this.metroTabPage2.VerticalScrollbarSize = 10;
+            // 
+            // btnDeposit
+            // 
+            this.btnDeposit.AutoSize = true;
+            this.btnDeposit.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnDeposit.Depth = 0;
+            this.btnDeposit.Location = new System.Drawing.Point(222, 106);
+            this.btnDeposit.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnDeposit.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnDeposit.Name = "btnDeposit";
+            this.btnDeposit.Primary = false;
+            this.btnDeposit.Size = new System.Drawing.Size(67, 36);
+            this.btnDeposit.TabIndex = 49;
+            this.btnDeposit.Text = "DEPOSIT";
+            this.btnDeposit.UseVisualStyleBackColor = true;
+            this.btnDeposit.Click += new System.EventHandler(this.btnDeposit_Click_1);
+            // 
+            // metroLabel3
+            // 
+            this.metroLabel3.AutoSize = true;
+            this.metroLabel3.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.metroLabel3.Location = new System.Drawing.Point(3, 16);
+            this.metroLabel3.Name = "metroLabel3";
+            this.metroLabel3.Size = new System.Drawing.Size(186, 19);
+            this.metroLabel3.TabIndex = 48;
+            this.metroLabel3.Text = "Storing cash in your account.";
+            // 
+            // txtDeposit
+            // 
+            this.txtDeposit.Lines = new string[0];
+            this.txtDeposit.Location = new System.Drawing.Point(222, 62);
+            this.txtDeposit.MaxLength = 32767;
+            this.txtDeposit.Name = "txtDeposit";
+            this.txtDeposit.PasswordChar = '\0';
+            this.txtDeposit.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtDeposit.SelectedText = "";
+            this.txtDeposit.Size = new System.Drawing.Size(199, 23);
+            this.txtDeposit.TabIndex = 47;
+            this.txtDeposit.UseSelectable = true;
+            // 
+            // metroLabel4
+            // 
+            this.metroLabel4.AutoSize = true;
+            this.metroLabel4.Location = new System.Drawing.Point(77, 66);
+            this.metroLabel4.Name = "metroLabel4";
+            this.metroLabel4.Size = new System.Drawing.Size(107, 19);
+            this.metroLabel4.TabIndex = 46;
+            this.metroLabel4.Text = "Deposit Amount:";
+            // 
+            // metroTabPage3
+            // 
+            this.metroTabPage3.Controls.Add(this.btnEncash);
+            this.metroTabPage3.Controls.Add(this.metroLabel5);
+            this.metroTabPage3.Controls.Add(this.txtEncash);
+            this.metroTabPage3.Controls.Add(this.metroLabel6);
+            this.metroTabPage3.HorizontalScrollbarBarColor = true;
+            this.metroTabPage3.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroTabPage3.HorizontalScrollbarSize = 10;
+            this.metroTabPage3.Location = new System.Drawing.Point(4, 38);
+            this.metroTabPage3.Name = "metroTabPage3";
+            this.metroTabPage3.Size = new System.Drawing.Size(510, 192);
+            this.metroTabPage3.TabIndex = 2;
+            this.metroTabPage3.Text = "Encashment";
+            this.metroTabPage3.VerticalScrollbarBarColor = true;
+            this.metroTabPage3.VerticalScrollbarHighlightOnWheel = false;
+            this.metroTabPage3.VerticalScrollbarSize = 10;
+            // 
+            // btnEncash
+            // 
+            this.btnEncash.AutoSize = true;
+            this.btnEncash.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnEncash.Depth = 0;
+            this.btnEncash.Location = new System.Drawing.Point(219, 106);
+            this.btnEncash.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnEncash.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnEncash.Name = "btnEncash";
+            this.btnEncash.Primary = false;
+            this.btnEncash.Size = new System.Drawing.Size(66, 36);
+            this.btnEncash.TabIndex = 53;
+            this.btnEncash.Text = "ENCASH";
+            this.btnEncash.UseVisualStyleBackColor = true;
+            this.btnEncash.Click += new System.EventHandler(this.btnEncash_Click);
+            // 
+            // metroLabel5
+            // 
+            this.metroLabel5.AutoSize = true;
+            this.metroLabel5.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.metroLabel5.Location = new System.Drawing.Point(0, 7);
+            this.metroLabel5.Name = "metroLabel5";
+            this.metroLabel5.Size = new System.Drawing.Size(348, 38);
+            this.metroLabel5.TabIndex = 52;
+            this.metroLabel5.Text = "Encash your amount, if encashment \r\nis greater that your balance it will counted " +
+    "as your loan.";
+            // 
+            // txtEncash
+            // 
+            this.txtEncash.Lines = new string[0];
+            this.txtEncash.Location = new System.Drawing.Point(219, 62);
+            this.txtEncash.MaxLength = 32767;
+            this.txtEncash.Name = "txtEncash";
+            this.txtEncash.PasswordChar = '\0';
+            this.txtEncash.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtEncash.SelectedText = "";
+            this.txtEncash.Size = new System.Drawing.Size(199, 23);
+            this.txtEncash.TabIndex = 51;
+            this.txtEncash.UseSelectable = true;
+            // 
+            // metroLabel6
+            // 
+            this.metroLabel6.AutoSize = true;
+            this.metroLabel6.Location = new System.Drawing.Point(74, 66);
+            this.metroLabel6.Name = "metroLabel6";
+            this.metroLabel6.Size = new System.Drawing.Size(132, 19);
+            this.metroLabel6.TabIndex = 50;
+            this.metroLabel6.Text = "Encashment Amount:";
+            // 
+            // metroTabPage4
+            // 
+            this.metroTabPage4.Controls.Add(this.txtOldPin);
+            this.metroTabPage4.Controls.Add(this.metroLabel15);
+            this.metroTabPage4.Controls.Add(this.btnChangePin);
+            this.metroTabPage4.Controls.Add(this.txtNewPin);
+            this.metroTabPage4.Controls.Add(this.txtConfirmPin);
+            this.metroTabPage4.Controls.Add(this.metroLabel10);
+            this.metroTabPage4.Controls.Add(this.metroLabel9);
+            this.metroTabPage4.HorizontalScrollbarBarColor = true;
+            this.metroTabPage4.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroTabPage4.HorizontalScrollbarSize = 10;
+            this.metroTabPage4.Location = new System.Drawing.Point(4, 38);
+            this.metroTabPage4.Name = "metroTabPage4";
+            this.metroTabPage4.Size = new System.Drawing.Size(510, 192);
+            this.metroTabPage4.TabIndex = 3;
+            this.metroTabPage4.Text = "Change Pin";
+            this.metroTabPage4.VerticalScrollbarBarColor = true;
+            this.metroTabPage4.VerticalScrollbarHighlightOnWheel = false;
+            this.metroTabPage4.VerticalScrollbarSize = 10;
+            // 
+            // txtOldPin
+            // 
+            this.txtOldPin.Lines = new string[0];
+            this.txtOldPin.Location = new System.Drawing.Point(214, 16);
+            this.txtOldPin.MaxLength = 32767;
+            this.txtOldPin.Name = "txtOldPin";
+            this.txtOldPin.PasswordChar = '*';
+            this.txtOldPin.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtOldPin.SelectedText = "";
+            this.txtOldPin.Size = new System.Drawing.Size(199, 23);
+            this.txtOldPin.TabIndex = 51;
+            this.txtOldPin.UseSelectable = true;
+            // 
+            // metroLabel15
+            // 
+            this.metroLabel15.AutoSize = true;
+            this.metroLabel15.Location = new System.Drawing.Point(85, 20);
+            this.metroLabel15.Name = "metroLabel15";
+            this.metroLabel15.Size = new System.Drawing.Size(56, 19);
+            this.metroLabel15.TabIndex = 50;
+            this.metroLabel15.Text = "Old Pin:";
+            // 
+            // btnChangePin
+            // 
+            this.btnChangePin.AutoSize = true;
+            this.btnChangePin.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnChangePin.Depth = 0;
+            this.btnChangePin.Location = new System.Drawing.Point(214, 134);
+            this.btnChangePin.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnChangePin.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnChangePin.Name = "btnChangePin";
+            this.btnChangePin.Primary = false;
+            this.btnChangePin.Size = new System.Drawing.Size(92, 36);
+            this.btnChangePin.TabIndex = 49;
+            this.btnChangePin.Text = "Change Pin";
+            this.btnChangePin.UseVisualStyleBackColor = true;
+            // 
+            // txtNewPin
+            // 
+            this.txtNewPin.Lines = new string[0];
+            this.txtNewPin.Location = new System.Drawing.Point(214, 57);
+            this.txtNewPin.MaxLength = 32767;
+            this.txtNewPin.Name = "txtNewPin";
+            this.txtNewPin.PasswordChar = '*';
+            this.txtNewPin.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtNewPin.SelectedText = "";
+            this.txtNewPin.Size = new System.Drawing.Size(199, 23);
+            this.txtNewPin.TabIndex = 41;
+            this.txtNewPin.UseSelectable = true;
+            // 
+            // txtConfirmPin
+            // 
+            this.txtConfirmPin.Lines = new string[0];
+            this.txtConfirmPin.Location = new System.Drawing.Point(214, 91);
+            this.txtConfirmPin.MaxLength = 32767;
+            this.txtConfirmPin.Name = "txtConfirmPin";
+            this.txtConfirmPin.PasswordChar = '*';
+            this.txtConfirmPin.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtConfirmPin.SelectedText = "";
+            this.txtConfirmPin.Size = new System.Drawing.Size(199, 23);
+            this.txtConfirmPin.TabIndex = 40;
+            this.txtConfirmPin.UseSelectable = true;
+            // 
+            // metroLabel10
+            // 
+            this.metroLabel10.AutoSize = true;
+            this.metroLabel10.Location = new System.Drawing.Point(85, 91);
+            this.metroLabel10.Name = "metroLabel10";
+            this.metroLabel10.Size = new System.Drawing.Size(82, 19);
+            this.metroLabel10.TabIndex = 39;
+            this.metroLabel10.Text = "Confirm Pin:";
+            // 
+            // metroLabel9
+            // 
+            this.metroLabel9.AutoSize = true;
+            this.metroLabel9.Location = new System.Drawing.Point(85, 61);
+            this.metroLabel9.Name = "metroLabel9";
+            this.metroLabel9.Size = new System.Drawing.Size(60, 19);
+            this.metroLabel9.TabIndex = 38;
+            this.metroLabel9.Text = "New Pin:";
+            // 
+            // metroTabPage5
+            // 
+            this.metroTabPage5.Controls.Add(this.btnDeleteAccount);
+            this.metroTabPage5.Controls.Add(this.txtDelPass);
+            this.metroTabPage5.Controls.Add(this.metroLabel8);
+            this.metroTabPage5.Controls.Add(this.txtDelPin);
+            this.metroTabPage5.Controls.Add(this.metroLabel7);
+            this.metroTabPage5.HorizontalScrollbarBarColor = true;
+            this.metroTabPage5.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroTabPage5.HorizontalScrollbarSize = 10;
+            this.metroTabPage5.Location = new System.Drawing.Point(4, 38);
+            this.metroTabPage5.Name = "metroTabPage5";
+            this.metroTabPage5.Size = new System.Drawing.Size(510, 192);
+            this.metroTabPage5.TabIndex = 4;
+            this.metroTabPage5.Text = "Delete Account";
+            this.metroTabPage5.VerticalScrollbarBarColor = true;
+            this.metroTabPage5.VerticalScrollbarHighlightOnWheel = false;
+            this.metroTabPage5.VerticalScrollbarSize = 10;
+            // 
+            // txtDelPass
+            // 
+            this.txtDelPass.Lines = new string[0];
+            this.txtDelPass.Location = new System.Drawing.Point(206, 80);
+            this.txtDelPass.MaxLength = 32767;
+            this.txtDelPass.Name = "txtDelPass";
+            this.txtDelPass.PasswordChar = '*';
+            this.txtDelPass.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtDelPass.SelectedText = "";
+            this.txtDelPass.Size = new System.Drawing.Size(199, 23);
+            this.txtDelPass.TabIndex = 55;
+            this.txtDelPass.UseSelectable = true;
+            // 
+            // metroLabel8
+            // 
+            this.metroLabel8.AutoSize = true;
+            this.metroLabel8.Location = new System.Drawing.Point(77, 84);
+            this.metroLabel8.Name = "metroLabel8";
+            this.metroLabel8.Size = new System.Drawing.Size(130, 19);
+            this.metroLabel8.TabIndex = 54;
+            this.metroLabel8.Text = "Enter your Password:";
+            // 
+            // txtDelPin
+            // 
+            this.txtDelPin.Lines = new string[0];
+            this.txtDelPin.Location = new System.Drawing.Point(206, 51);
+            this.txtDelPin.MaxLength = 32767;
+            this.txtDelPin.Name = "txtDelPin";
+            this.txtDelPin.PasswordChar = '*';
+            this.txtDelPin.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtDelPin.SelectedText = "";
+            this.txtDelPin.Size = new System.Drawing.Size(199, 23);
+            this.txtDelPin.TabIndex = 53;
+            this.txtDelPin.UseSelectable = true;
+            // 
+            // metroLabel7
+            // 
+            this.metroLabel7.AutoSize = true;
+            this.metroLabel7.Location = new System.Drawing.Point(77, 55);
+            this.metroLabel7.Name = "metroLabel7";
+            this.metroLabel7.Size = new System.Drawing.Size(115, 19);
+            this.metroLabel7.TabIndex = 52;
+            this.metroLabel7.Text = "Enter Account Pin:";
+            // 
+            // btnDeleteAccount
+            // 
+            this.btnDeleteAccount.AutoSize = true;
+            this.btnDeleteAccount.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnDeleteAccount.Depth = 0;
+            this.btnDeleteAccount.Location = new System.Drawing.Point(206, 112);
+            this.btnDeleteAccount.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnDeleteAccount.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnDeleteAccount.Name = "btnDeleteAccount";
+            this.btnDeleteAccount.Primary = false;
+            this.btnDeleteAccount.Size = new System.Drawing.Size(127, 36);
+            this.btnDeleteAccount.TabIndex = 56;
+            this.btnDeleteAccount.Text = "DELETE ACCOUNT";
+            this.btnDeleteAccount.UseVisualStyleBackColor = true;
+            // 
             // transac_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(118)))), ((int)(((byte)(135)))));
-            this.ClientSize = new System.Drawing.Size(492, 348);
+            this.ClientSize = new System.Drawing.Size(546, 375);
+            this.Controls.Add(this.metroTabControl1);
             this.Controls.Add(this.lblLoan);
             this.Controls.Add(this.lblBalance);
             this.Controls.Add(this.metroLabel2);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.btnEncashment);
-            this.Controls.Add(this.btnDeposit);
-            this.Controls.Add(this.btnWithdraw);
             this.MaximizeBox = false;
             this.Name = "transac_form";
             this.Sizable = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Banking System";
             this.Load += new System.EventHandler(this.transac_form_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.metroTabControl1.ResumeLayout(false);
+            this.metroTabPage1.ResumeLayout(false);
+            this.metroTabPage1.PerformLayout();
+            this.metroTabPage2.ResumeLayout(false);
+            this.metroTabPage2.PerformLayout();
+            this.metroTabPage3.ResumeLayout(false);
+            this.metroTabPage3.PerformLayout();
+            this.metroTabPage4.ResumeLayout(false);
+            this.metroTabPage4.PerformLayout();
+            this.metroTabPage5.ResumeLayout(false);
+            this.metroTabPage5.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -205,16 +530,39 @@
 
         #endregion
 
-        private MaterialSkin.Controls.MaterialFlatButton btnWithdraw;
-        private MaterialSkin.Controls.MaterialFlatButton btnDeposit;
-        private MaterialSkin.Controls.MaterialFlatButton btnEncashment;
-        private System.Windows.Forms.Panel panel1;
-        private MaterialSkin.Controls.MaterialFlatButton btnSubmit;
-        private MetroFramework.Controls.MetroLabel metroLabel1;
-        private MetroFramework.Controls.MetroTextBox txtAmount;
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private MetroFramework.Controls.MetroLabel lblBalance;
         private MetroFramework.Controls.MetroLabel lblLoan;
+        private MetroFramework.Controls.MetroTabControl metroTabControl1;
+        private MetroFramework.Controls.MetroTabPage metroTabPage1;
+        private MetroFramework.Controls.MetroTabPage metroTabPage2;
+        private MetroFramework.Controls.MetroTabPage metroTabPage3;
+        private MaterialSkin.Controls.MaterialFlatButton btnWithdraw;
+        private MetroFramework.Controls.MetroLabel metroLabel1;
+        private MetroFramework.Controls.MetroLabel metroLabel16;
+        private MetroFramework.Controls.MetroTabPage metroTabPage5;
+        private MetroFramework.Controls.MetroTextBox txtWithdraw;
+        private MaterialSkin.Controls.MaterialFlatButton btnDeposit;
+        private MetroFramework.Controls.MetroLabel metroLabel3;
+        private MetroFramework.Controls.MetroTextBox txtDeposit;
+        private MetroFramework.Controls.MetroLabel metroLabel4;
+        private MaterialSkin.Controls.MaterialFlatButton btnEncash;
+        private MetroFramework.Controls.MetroLabel metroLabel5;
+        private MetroFramework.Controls.MetroTextBox txtEncash;
+        private MetroFramework.Controls.MetroLabel metroLabel6;
+        private MetroFramework.Controls.MetroTabPage metroTabPage4;
+        private MetroFramework.Controls.MetroTextBox txtOldPin;
+        private MetroFramework.Controls.MetroLabel metroLabel15;
+        private MaterialSkin.Controls.MaterialFlatButton btnChangePin;
+        private MetroFramework.Controls.MetroTextBox txtNewPin;
+        private MetroFramework.Controls.MetroTextBox txtConfirmPin;
+        private MetroFramework.Controls.MetroLabel metroLabel10;
+        private MetroFramework.Controls.MetroLabel metroLabel9;
+        private MetroFramework.Controls.MetroTextBox txtDelPass;
+        private MetroFramework.Controls.MetroLabel metroLabel8;
+        private MetroFramework.Controls.MetroTextBox txtDelPin;
+        private MetroFramework.Controls.MetroLabel metroLabel7;
+        private MaterialSkin.Controls.MaterialFlatButton btnDeleteAccount;
 
     }
 }

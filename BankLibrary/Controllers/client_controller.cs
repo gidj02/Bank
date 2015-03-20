@@ -20,6 +20,16 @@ namespace BankLibrary.Controllers
         {
             return this.clientda.getClient();
         }
+
+        public bool createClient(string firstname, string middlename, string lastname, string address, string number, string email, string username, string password)
+        {
+            return this.clientda.createClient(firstname, middlename, lastname, address, number, email, username, password);
+        }
+
+        public bool updateClient(int clientid, string firstname, string middlename, string lastname, string address, string number, string email, string username)
+        {
+            return this.clientda.updateClient(clientid,firstname, middlename, lastname, address, number, email, username);
+        }
     }
 }
 

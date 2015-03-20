@@ -9,12 +9,16 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using BankLibrary.Models;
+using BankLibrary.DataAccess;
+using BankLibrary.Controllers;
 
 namespace Views
 {
     public partial class register_user_form : MaterialForm
     {
+        client_controller clientcon = new client_controller();
+        
         public register_user_form()
         {
             InitializeComponent();
@@ -22,7 +26,11 @@ namespace Views
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            
+            if (this.clientcon.createClient(txtFirstName.Text, txtMiddleName.Text, txtLastName.Text, txtAddress.Text, txtContact.Text, txtEmail.Text, txtUsername.Text, txtPassword.Text))
+            {
+                MessageBox.Show("Success! Client Registered.");
+            }
+            else MessageBox.Show("Failed registration.");
         }
 
         private void txtEmail_TextChanged(object sender, EventArgs e)
@@ -86,6 +94,11 @@ namespace Views
                 return false;
             }
             return true;
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

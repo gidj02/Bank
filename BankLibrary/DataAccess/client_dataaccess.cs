@@ -115,5 +115,101 @@ namespace BankLibrary.DataAccess
         {
             return this.client;
         }
+       
+        public bool createClient(string firstname, string middlename, string lastname, string address, string number, string email, string username, string password)
+        {
+            try
+            {
+                setConnection();
+                using (SqlCommand cmd = new SqlCommand("registerAccount", conn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    cmd.Parameters.Add("@firstname", SqlDbType.NVarChar).Value = firstname;
+                    cmd.Parameters.Add("@middlename", SqlDbType.NVarChar).Value = middlename;
+                    cmd.Parameters.Add("@lastname", SqlDbType.NVarChar).Value = lastname;
+                    cmd.Parameters.Add("@address", SqlDbType.NVarChar).Value = address;
+                    cmd.Parameters.Add("@contactNumber", SqlDbType.NVarChar).Value = number;
+                    cmd.Parameters.Add("@email", SqlDbType.NVarChar).Value = email;
+                    cmd.Parameters.Add("@username", SqlDbType.NVarChar).Value = username;
+                    cmd.Parameters.Add("@password", SqlDbType.NVarChar).Value = password;
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message.ToString());
+            }
+            finally
+            {
+                setConnection();
+            }
+
+            return true;
+        }
+
+        public bool updateClient(int clientid, string firstname, string middlename, string lastname, string address, string number, string email, string username)
+        {
+            try
+            {
+                setConnection();
+                using (SqlCommand cmd = new SqlCommand("updateClient", conn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    cmd.Parameters.Add("@clientId", SqlDbType.Int).Value = clientid;
+                    cmd.Parameters.Add("@firstname", SqlDbType.NVarChar).Value = firstname;
+                    cmd.Parameters.Add("@middlename", SqlDbType.NVarChar).Value = middlename;
+                    cmd.Parameters.Add("@lastname", SqlDbType.NVarChar).Value = lastname;
+                    cmd.Parameters.Add("@address", SqlDbType.NVarChar).Value = address;
+                    cmd.Parameters.Add("@contactNumber", SqlDbType.NVarChar).Value = number;
+                    cmd.Parameters.Add("@email", SqlDbType.NVarChar).Value = email;
+                    cmd.Parameters.Add("@username", SqlDbType.NVarChar).Value = username;
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message.ToString());
+            }
+            finally
+            {
+                setConnection();
+            }
+
+            return true;
+        }
+
+        /*public bool deleteClient()
+        {
+            try
+            {
+                setConnection();
+                using (SqlCommand cmd = new SqlCommand("updateClient", conn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    cmd.Parameters.Add("@clientId", SqlDbType.Int).Value = clientid;
+                    cmd.Parameters.Add("@firstname", SqlDbType.NVarChar).Value = firstname;
+                    cmd.Parameters.Add("@middlename", SqlDbType.NVarChar).Value = middlename;
+                    cmd.Parameters.Add("@lastname", SqlDbType.NVarChar).Value = lastname;
+                    cmd.Parameters.Add("@address", SqlDbType.NVarChar).Value = address;
+                    cmd.Parameters.Add("@contactNumber", SqlDbType.NVarChar).Value = number;
+                    cmd.Parameters.Add("@email", SqlDbType.NVarChar).Value = email;
+                    cmd.Parameters.Add("@username", SqlDbType.NVarChar).Value = username;
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message.ToString());
+            }
+            finally
+            {
+                setConnection();
+            }
+
+            return true;
+        }*/
     }
 }

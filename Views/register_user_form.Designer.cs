@@ -38,7 +38,6 @@
             this.txtFirstName = new MetroFramework.Controls.MetroTextBox();
             this.txtMiddleName = new MetroFramework.Controls.MetroTextBox();
             this.txtLastName = new MetroFramework.Controls.MetroTextBox();
-            this.txtContact = new MetroFramework.Controls.MetroTextBox();
             this.txtEmail = new MetroFramework.Controls.MetroTextBox();
             this.materialDivider1 = new MaterialSkin.Controls.MaterialDivider();
             this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
@@ -49,8 +48,8 @@
             this.txtUsername = new MetroFramework.Controls.MetroTextBox();
             this.btnSubmit = new MaterialSkin.Controls.MaterialFlatButton();
             this.btnClear = new MaterialSkin.Controls.MaterialFlatButton();
-            this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
-            this.metroComboBox2 = new MetroFramework.Controls.MetroComboBox();
+            this.txtContact = new MetroFramework.Controls.MetroTextBox();
+            this.txtAddress = new MetroFramework.Controls.MetroTextBox();
             this.SuspendLayout();
             // 
             // metroLabel1
@@ -156,19 +155,6 @@
             this.txtLastName.Size = new System.Drawing.Size(199, 23);
             this.txtLastName.TabIndex = 8;
             this.txtLastName.UseSelectable = true;
-            // 
-            // txtContact
-            // 
-            this.txtContact.Lines = new string[0];
-            this.txtContact.Location = new System.Drawing.Point(157, 270);
-            this.txtContact.MaxLength = 32767;
-            this.txtContact.Name = "txtContact";
-            this.txtContact.PasswordChar = '\0';
-            this.txtContact.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtContact.SelectedText = "";
-            this.txtContact.Size = new System.Drawing.Size(199, 23);
-            this.txtContact.TabIndex = 10;
-            this.txtContact.UseSelectable = true;
             // 
             // txtEmail
             // 
@@ -291,26 +277,33 @@
             this.btnClear.TabIndex = 20;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
-            // metroComboBox1
+            // txtContact
             // 
-            this.metroComboBox1.FormattingEnabled = true;
-            this.metroComboBox1.ItemHeight = 23;
-            this.metroComboBox1.Location = new System.Drawing.Point(157, 223);
-            this.metroComboBox1.Name = "metroComboBox1";
-            this.metroComboBox1.Size = new System.Drawing.Size(92, 29);
-            this.metroComboBox1.TabIndex = 21;
-            this.metroComboBox1.UseSelectable = true;
+            this.txtContact.Lines = new string[0];
+            this.txtContact.Location = new System.Drawing.Point(157, 270);
+            this.txtContact.MaxLength = 32767;
+            this.txtContact.Name = "txtContact";
+            this.txtContact.PasswordChar = '\0';
+            this.txtContact.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtContact.SelectedText = "";
+            this.txtContact.Size = new System.Drawing.Size(199, 23);
+            this.txtContact.TabIndex = 10;
+            this.txtContact.UseSelectable = true;
             // 
-            // metroComboBox2
+            // txtAddress
             // 
-            this.metroComboBox2.FormattingEnabled = true;
-            this.metroComboBox2.ItemHeight = 23;
-            this.metroComboBox2.Location = new System.Drawing.Point(268, 223);
-            this.metroComboBox2.Name = "metroComboBox2";
-            this.metroComboBox2.Size = new System.Drawing.Size(88, 29);
-            this.metroComboBox2.TabIndex = 22;
-            this.metroComboBox2.UseSelectable = true;
+            this.txtAddress.Lines = new string[0];
+            this.txtAddress.Location = new System.Drawing.Point(157, 214);
+            this.txtAddress.MaxLength = 32767;
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.PasswordChar = '\0';
+            this.txtAddress.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtAddress.SelectedText = "";
+            this.txtAddress.Size = new System.Drawing.Size(199, 23);
+            this.txtAddress.TabIndex = 21;
+            this.txtAddress.UseSelectable = true;
             // 
             // register_user_form
             // 
@@ -319,8 +312,7 @@
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(407, 566);
-            this.Controls.Add(this.metroComboBox2);
-            this.Controls.Add(this.metroComboBox1);
+            this.Controls.Add(this.txtAddress);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.txtUsername);
@@ -364,7 +356,6 @@
         private MetroFramework.Controls.MetroTextBox txtFirstName;
         private MetroFramework.Controls.MetroTextBox txtMiddleName;
         private MetroFramework.Controls.MetroTextBox txtLastName;
-        private MetroFramework.Controls.MetroTextBox txtContact;
         private MetroFramework.Controls.MetroTextBox txtEmail;
         private MaterialSkin.Controls.MaterialDivider materialDivider1;
         private MetroFramework.Controls.MetroLabel metroLabel8;
@@ -375,7 +366,7 @@
         private MetroFramework.Controls.MetroTextBox txtUsername;
         private MaterialSkin.Controls.MaterialFlatButton btnSubmit;
         private MaterialSkin.Controls.MaterialFlatButton btnClear;
-        private MetroFramework.Controls.MetroComboBox metroComboBox1;
-        private MetroFramework.Controls.MetroComboBox metroComboBox2;
+        private MetroFramework.Controls.MetroTextBox txtContact;
+        private MetroFramework.Controls.MetroTextBox txtAddress;
     }
 }

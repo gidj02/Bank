@@ -57,6 +57,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="create_account_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="create_account_form.Designer.cs">
+      <DependentUpon>create_account_form.cs</DependentUpon>
+    </Compile>
     <Compile Include="home_form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +101,9 @@
     <Compile Include="client_form.Designer.cs">
       <DependentUpon>client_form.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="create_account_form.resx">
+      <DependentUpon>create_account_form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="home_form.resx">
       <DependentUpon>home_form.cs</DependentUpon>
     </EmbeddedResource>
