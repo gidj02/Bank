@@ -42,8 +42,9 @@ namespace Views
             {
                 int accountid;
                 accountid = Convert.ToInt32(dgAccounts.Rows[e.RowIndex].Cells[0].Value);
-                //accountcon.setAccount(accountid);
-                pin_form pform = new pin_form(accountid);
+                account = accountcon.setAccount(accountid);
+
+                pin_form pform = new pin_form(account);
                 pform.FormClosed += new FormClosedEventHandler(pform_FormClosed);
                 pform.Show();
                 this.Hide();

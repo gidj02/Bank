@@ -45,6 +45,7 @@
     <Compile Include="DataAccess\client_dataaccess.cs" />
     <Compile Include="Models\account.cs" />
     <Compile Include="Models\client.cs" />
+    <Compile Include="Models\loan_balance.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

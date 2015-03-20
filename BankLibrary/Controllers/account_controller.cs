@@ -18,9 +18,9 @@ namespace BankLibrary.Controllers
             return this.account.listAccount(userid);
         }
 
-        public void setAccount(int accoid)
+        public account setAccount(int accoid)
         {
-            this.account.setAccount(accoid);
+            return this.account.setAccount(accoid);
         }
 
         public account getCurrentAccount()
@@ -31,6 +31,26 @@ namespace BankLibrary.Controllers
         public bool checkPin(string pincode, int accoid)
         {
             return this.account.checkPin(pincode, accoid);
+        }
+
+        public void setBalanceandLoan(int accoid)
+        {
+            this.account.setBalanceandLoan(accoid);
+        }
+
+        public loan_balance getBalanceandLoan() 
+        {
+            return this.account.getBalanceandLoan();
+        }
+
+        public bool clientWithdraw(int accoid, decimal amount)
+        {
+            return this.account.clientWithdraw(accoid, amount);
+        }
+
+        public bool clientDeposit(int accoid, decimal amount)
+        {
+            return this.account.clientDeposit(accoid, amount);
         }
     }
 }

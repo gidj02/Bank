@@ -17,7 +17,7 @@ namespace Views
     public partial class pin_form : MaterialForm
     {
         account_controller accountcon = new account_controller();
-
+        account account;
         int accoid;
 
         public pin_form()
@@ -25,10 +25,10 @@ namespace Views
             InitializeComponent();
         }
 
-        public pin_form(int accoid)
+        public pin_form(account account)
         {
             InitializeComponent();
-            this.accoid = accoid;
+            this.account = account;
         }
 
         private void pin_form_Load(object sender, EventArgs e)
@@ -38,11 +38,10 @@ namespace Views
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-
-            if (accountcon.checkPin(txtPin.Text, accoid))
+            if (accountcon.checkPin(txtPin.Text, this.account.accountid))
             {
                 MessageBox.Show("Account Logged In!");
-                transac_form transact = new transac_form();
+                transac_form transact = new transac_form(this.account);
                 transact.Show();
                 this.Hide();
             }

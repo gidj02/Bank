@@ -14,6 +14,7 @@ namespace BankLibrary.DataAccess
         private static string connStr = @"Data Source=.; Integrated Security=TRUE; Initial Catalog= DBBank;";
         public SqlConnection conn = new SqlConnection(connStr);
         account account;
+        loan_balance loanbalance;
 
         public void setConnection()
         {
@@ -59,12 +60,12 @@ namespace BankLibrary.DataAccess
             return dt;
         }
 
-        public void setAccount(int accoid)
+        public account setAccount(int accoid)
         {
             try
             {
                 setConnection();
-                SqlCommand cmd = new SqlCommand("getAccontInfo", conn);
+                SqlCommand cmd = new SqlCommand("getAccountInfo", conn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.Add("@accoid", SqlDbType.Int).Value = accoid;
                 SqlDataReader reader = cmd.ExecuteReader();
@@ -81,6 +82,8 @@ namespace BankLibrary.DataAccess
                     };
                     account = a;
                 }
+
+                return this.account;
             }
             catch (Exception)
             {
@@ -134,5 +137,122 @@ namespace BankLibrary.DataAccess
                 setConnection();
             }
         }
+
+        public void setBalanceandLoan(int accoid)
+        {
+            try
+            {
+                setConnection();
+                SqlCommand cmd = new SqlCommand("getBalanceandLoan", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add("@accoid", SqlDbType.NVarChar).Value = accoid;
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    loan_balance lb = new loan_balance()
+                    {
+                        loanAmount = (decimal)reader["currentLoan"],
+                        balanceAmount = (decimal)reader["currentBalance"]
+                    };
+                    this.loanbalance = lb;
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                setConnection();
+            }
+        }
+        public bool clientWithdraw(int accoid, decimal amount)
+        {
+            int value = 0;
+            try
+            {
+                setConnection();
+                using (SqlCommand cmd = new SqlCommand("withdraw", conn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    cmd.Parameters.Add("@accountId", SqlDbType.VarChar).Value = accoid;
+                    cmd.Parameters.Add("@amount", SqlDbType.VarChar).Value = amount;
+
+                    SqlParameter ret = new SqlParameter("@return", SqlDbType.Int);
+                    ret.Direction = ParameterDirection.ReturnValue;
+                    cmd.Parameters.Add(ret);
+                    cmd.ExecuteNonQuery();
+                    value = Convert.ToInt32(ret.Value);
+                }
+
+                if (value == 1)
+                {
+                    setConnection();
+                    setBalanceandLoan(accoid);
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message.ToString());
+            }
+            finally
+            {
+                setConnection();
+            }
+        }
+
+        public loan_balance getBalanceandLoan()
+        {
+            return this.loanbalance;
+        }
+
+        public bool clientDeposit(int accoid, decimal amount)
+        {
+            int value = 0;
+            try
+            {
+                setConnection();
+                using (SqlCommand cmd = new SqlCommand("deposit", conn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    cmd.Parameters.Add("@accountId", SqlDbType.VarChar).Value = accoid;
+                    cmd.Parameters.Add("@amount", SqlDbType.VarChar).Value = amount;
+
+                    SqlParameter ret = new SqlParameter("@return", SqlDbType.Int);
+                    ret.Direction = ParameterDirection.ReturnValue;
+                    cmd.Parameters.Add(ret);
+                    cmd.ExecuteNonQuery();
+                    value = Convert.ToInt32(ret.Value);
+                }
+
+                if (value == 1)
+                {
+                    setConnection();
+                    setBalanceandLoan(accoid);
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message.ToString());
+            }
+            finally
+            {
+                setConnection();
+            }
+        }
     }
+
 }
