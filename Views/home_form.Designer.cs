@@ -33,6 +33,7 @@
             this.txtPassword = new MetroFramework.Controls.MetroTextBox();
             this.txtUsername = new MetroFramework.Controls.MetroTextBox();
             this.btnLogin = new MaterialSkin.Controls.MaterialFlatButton();
+            this.linkRegister = new MetroFramework.Controls.MetroLink();
             this.SuspendLayout();
             // 
             // materialLabel1
@@ -105,11 +106,23 @@
             this.btnLogin.UseVisualStyleBackColor = true;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click_1);
             // 
+            // linkRegister
+            // 
+            this.linkRegister.FontWeight = MetroFramework.MetroLinkWeight.Regular;
+            this.linkRegister.Location = new System.Drawing.Point(190, 202);
+            this.linkRegister.Name = "linkRegister";
+            this.linkRegister.Size = new System.Drawing.Size(186, 23);
+            this.linkRegister.TabIndex = 6;
+            this.linkRegister.Text = "Not Yet a Member? Register Here.";
+            this.linkRegister.UseSelectable = true;
+            this.linkRegister.Click += new System.EventHandler(this.linkRegister_Click);
+            // 
             // home_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(406, 223);
+            this.ClientSize = new System.Drawing.Size(406, 237);
+            this.Controls.Add(this.linkRegister);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.txtPassword);
@@ -134,5 +147,6 @@
         private MetroFramework.Controls.MetroTextBox txtPassword;
         private MetroFramework.Controls.MetroTextBox txtUsername;
         private MaterialSkin.Controls.MaterialFlatButton btnLogin;
+        private MetroFramework.Controls.MetroLink linkRegister;
     }
 }

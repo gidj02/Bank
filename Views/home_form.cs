@@ -53,5 +53,12 @@ namespace Views
         {
             this.ActiveControl = txtUsername;
         }
+
+        private void linkRegister_Click(object sender, EventArgs e)
+        {
+            register_user_form register = new register_user_form();
+            register.Show();
+            this.Dispose();
+        }
     }
 }

@@ -32,6 +32,10 @@
             this.materialFlatButton2 = new MaterialSkin.Controls.MaterialFlatButton();
             this.materialFlatButton3 = new MaterialSkin.Controls.MaterialFlatButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnValue = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.materialFlatButton4 = new MaterialSkin.Controls.MaterialFlatButton();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // materialFlatButton1
@@ -84,10 +88,56 @@
             // 
             // panel1
             // 
-            this.panel1.Location = new System.Drawing.Point(13, 136);
+            this.panel1.Controls.Add(this.materialFlatButton4);
+            this.panel1.Controls.Add(this.metroLabel1);
+            this.panel1.Controls.Add(this.btnValue);
+            this.panel1.Location = new System.Drawing.Point(13, 123);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 100);
+            this.panel1.Size = new System.Drawing.Size(458, 165);
             this.panel1.TabIndex = 3;
+            // 
+            // btnValue
+            // 
+            this.btnValue.Lines = new string[0];
+            this.btnValue.Location = new System.Drawing.Point(204, 26);
+            this.btnValue.MaxLength = 32767;
+            this.btnValue.Name = "btnValue";
+            this.btnValue.PasswordChar = '\0';
+            this.btnValue.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.btnValue.SelectedText = "";
+            this.btnValue.Size = new System.Drawing.Size(178, 23);
+            this.btnValue.TabIndex = 0;
+            this.btnValue.UseSelectable = true;
+            // 
+            // metroLabel1
+            // 
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.metroLabel1.ForeColor = System.Drawing.Color.White;
+            this.metroLabel1.Location = new System.Drawing.Point(116, 27);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(82, 19);
+            this.metroLabel1.TabIndex = 1;
+            this.metroLabel1.Text = "Enter Value:";
+            this.metroLabel1.UseCustomBackColor = true;
+            this.metroLabel1.UseCustomForeColor = true;
+            // 
+            // materialFlatButton4
+            // 
+            this.materialFlatButton4.AutoSize = true;
+            this.materialFlatButton4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialFlatButton4.BackColor = System.Drawing.Color.Aqua;
+            this.materialFlatButton4.Depth = 0;
+            this.materialFlatButton4.Location = new System.Drawing.Point(264, 58);
+            this.materialFlatButton4.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialFlatButton4.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialFlatButton4.Name = "materialFlatButton4";
+            this.materialFlatButton4.Primary = false;
+            this.materialFlatButton4.Size = new System.Drawing.Size(62, 36);
+            this.materialFlatButton4.TabIndex = 2;
+            this.materialFlatButton4.Text = "Submit";
+            this.materialFlatButton4.UseVisualStyleBackColor = false;
             // 
             // transac_form
             // 
@@ -104,6 +154,8 @@
             this.Sizable = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Banking System -- Transaction ";
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -115,6 +167,9 @@
         private MaterialSkin.Controls.MaterialFlatButton materialFlatButton2;
         private MaterialSkin.Controls.MaterialFlatButton materialFlatButton3;
         private System.Windows.Forms.Panel panel1;
+        private MaterialSkin.Controls.MaterialFlatButton materialFlatButton4;
+        private MetroFramework.Controls.MetroLabel metroLabel1;
+        private MetroFramework.Controls.MetroTextBox btnValue;
 
     }
 }

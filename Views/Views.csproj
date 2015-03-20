@@ -69,6 +69,12 @@
     <Compile Include="pin_form.Designer.cs">
       <DependentUpon>pin_form.cs</DependentUpon>
     </Compile>
+    <Compile Include="register_user_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="register_user_form.Designer.cs">
+      <DependentUpon>register_user_form.cs</DependentUpon>
+    </Compile>
     <Compile Include="splash_screen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +110,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="register_user_form.resx">
+      <DependentUpon>register_user_form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="splash_screen.resx">
       <DependentUpon>splash_screen.cs</DependentUpon>
     </EmbeddedResource>

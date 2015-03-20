@@ -24,7 +24,7 @@ namespace Views
         {
             tmr = new Timer();
             //set time interval 3 sec
-            tmr.Interval = 2000;
+            //tmr.Interval = 2000;
             //starts the timer
             tmr.Start();
             tmr.Tick += tmr_Tick;

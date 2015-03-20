@@ -38,9 +38,13 @@ namespace Views
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
+
             if (accountcon.checkPin(txtPin.Text, accoid))
             {
                 MessageBox.Show("Account Logged In!");
+                transac_form transact = new transac_form();
+                transact.Show();
+                this.Hide();
             }
             else
             {
@@ -50,6 +54,11 @@ namespace Views
             /*transac_form transac = new transac_form();
             transac.Show();
             this.Dispose();*/
+        }
+
+        private void pin_form_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Close();
         }
     }
 }
