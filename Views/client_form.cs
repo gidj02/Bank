@@ -32,7 +32,6 @@ namespace Views
         {
             InitializeComponent();
             lblWelcome.Text = "Welcome " + client.username;
-            MessageBox.Show("Welcome " + client.username);
             this.client = client;
             dgAccounts.DataSource = accountcon.listAccount(client.clientid);
         }
@@ -45,7 +44,7 @@ namespace Views
                 accountid = Convert.ToInt32(dgAccounts.Rows[e.RowIndex].Cells[0].Value);
                 account = accountcon.setAccount(accountid);
 
-                pin_form pform = new pin_form(account);
+                pin_form pform = new pin_form(account, client);
                 pform.FormClosed += new FormClosedEventHandler(pform_FormClosed);
                 pform.Show();
                 this.Hide();
@@ -97,6 +96,13 @@ namespace Views
                 MessageBox.Show("Account successfully updated");
             }
             else MessageBox.Show("Failed to update account.");
+        }
+
+        private void btnChangeAcc_Click(object sender, EventArgs e)
+        {
+            home_form home = new home_form();
+            home.Show();
+            this.Dispose();
         }
 
        /* private void txtDelete_Click(object sender, EventArgs e)

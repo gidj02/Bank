@@ -18,6 +18,7 @@ namespace Views
     {
         account_controller accountcon = new account_controller();
         account account;
+        client client;
         int accoid;
 
         public pin_form()
@@ -25,10 +26,11 @@ namespace Views
             InitializeComponent();
         }
 
-        public pin_form(account account)
+        public pin_form(account account, client client)
         {
             InitializeComponent();
             this.account = account;
+            this.client = client;
         }
 
         private void pin_form_Load(object sender, EventArgs e)
@@ -41,7 +43,7 @@ namespace Views
             if (accountcon.checkPin(txtPin.Text, this.account.accountid))
             {
                 MessageBox.Show("Account Logged In!");
-                transac_form transact = new transac_form(this.account);
+                transac_form transact = new transac_form(this.account, this.client);
                 transact.Show();
                 this.Hide();
             }

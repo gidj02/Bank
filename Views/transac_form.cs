@@ -21,6 +21,7 @@ namespace Views
         transaction_controller transcon = new transaction_controller();
         
         account account;
+        client client;
         loan_balance loanbalance;
 
         public transac_form()
@@ -28,10 +29,11 @@ namespace Views
             InitializeComponent();
         }
 
-        public transac_form(account account)
+        public transac_form(account account, client client)
         {
             InitializeComponent();
             this.account = account;
+            this.client = client;
         }
 
         private void transac_form_Load(object sender, EventArgs e)
@@ -87,6 +89,13 @@ namespace Views
             {
                 MessageBox.Show("Encashment Failed!");
             }
+        }
+
+        private void btnChangeAcc_Click(object sender, EventArgs e)
+        {
+            client_form clientForm = new client_form(client);
+            clientForm.Show();
+            this.Dispose();
         }
     }
 }

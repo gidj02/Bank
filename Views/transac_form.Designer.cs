@@ -56,11 +56,12 @@
             this.metroLabel10 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
             this.metroTabPage5 = new MetroFramework.Controls.MetroTabPage();
+            this.btnDeleteAccount = new MaterialSkin.Controls.MaterialFlatButton();
             this.txtDelPass = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
             this.txtDelPin = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
-            this.btnDeleteAccount = new MaterialSkin.Controls.MaterialFlatButton();
+            this.btnChangeAcc = new MetroFramework.Controls.MetroButton();
             this.metroTabControl1.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
             this.metroTabPage2.SuspendLayout();
@@ -109,7 +110,7 @@
             this.metroTabControl1.Controls.Add(this.metroTabPage5);
             this.metroTabControl1.Location = new System.Drawing.Point(12, 126);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 4;
+            this.metroTabControl1.SelectedIndex = 2;
             this.metroTabControl1.Size = new System.Drawing.Size(518, 234);
             this.metroTabControl1.TabIndex = 7;
             this.metroTabControl1.UseSelectable = true;
@@ -437,6 +438,21 @@
             this.metroTabPage5.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPage5.VerticalScrollbarSize = 10;
             // 
+            // btnDeleteAccount
+            // 
+            this.btnDeleteAccount.AutoSize = true;
+            this.btnDeleteAccount.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnDeleteAccount.Depth = 0;
+            this.btnDeleteAccount.Location = new System.Drawing.Point(206, 112);
+            this.btnDeleteAccount.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnDeleteAccount.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnDeleteAccount.Name = "btnDeleteAccount";
+            this.btnDeleteAccount.Primary = false;
+            this.btnDeleteAccount.Size = new System.Drawing.Size(127, 36);
+            this.btnDeleteAccount.TabIndex = 56;
+            this.btnDeleteAccount.Text = "DELETE ACCOUNT";
+            this.btnDeleteAccount.UseVisualStyleBackColor = true;
+            // 
             // txtDelPass
             // 
             this.txtDelPass.Lines = new string[0];
@@ -481,20 +497,17 @@
             this.metroLabel7.TabIndex = 52;
             this.metroLabel7.Text = "Enter Account Pin:";
             // 
-            // btnDeleteAccount
+            // btnChangeAcc
             // 
-            this.btnDeleteAccount.AutoSize = true;
-            this.btnDeleteAccount.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnDeleteAccount.Depth = 0;
-            this.btnDeleteAccount.Location = new System.Drawing.Point(206, 112);
-            this.btnDeleteAccount.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnDeleteAccount.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnDeleteAccount.Name = "btnDeleteAccount";
-            this.btnDeleteAccount.Primary = false;
-            this.btnDeleteAccount.Size = new System.Drawing.Size(127, 36);
-            this.btnDeleteAccount.TabIndex = 56;
-            this.btnDeleteAccount.Text = "DELETE ACCOUNT";
-            this.btnDeleteAccount.UseVisualStyleBackColor = true;
+            this.btnChangeAcc.FontWeight = MetroFramework.MetroButtonWeight.Light;
+            this.btnChangeAcc.Location = new System.Drawing.Point(415, 30);
+            this.btnChangeAcc.Name = "btnChangeAcc";
+            this.btnChangeAcc.Size = new System.Drawing.Size(119, 25);
+            this.btnChangeAcc.TabIndex = 54;
+            this.btnChangeAcc.Text = "Change Account..";
+            this.btnChangeAcc.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnChangeAcc.UseSelectable = true;
+            this.btnChangeAcc.Click += new System.EventHandler(this.btnChangeAcc_Click);
             // 
             // transac_form
             // 
@@ -502,6 +515,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(118)))), ((int)(((byte)(135)))));
             this.ClientSize = new System.Drawing.Size(546, 375);
+            this.Controls.Add(this.btnChangeAcc);
             this.Controls.Add(this.metroTabControl1);
             this.Controls.Add(this.lblLoan);
             this.Controls.Add(this.lblBalance);
@@ -563,6 +577,7 @@
         private MetroFramework.Controls.MetroTextBox txtDelPin;
         private MetroFramework.Controls.MetroLabel metroLabel7;
         private MaterialSkin.Controls.MaterialFlatButton btnDeleteAccount;
+        private MetroFramework.Controls.MetroButton btnChangeAcc;
 
     }
 }
