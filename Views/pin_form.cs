@@ -11,15 +11,17 @@ using System.Windows.Forms;
 using BankLibrary.Models;
 using BankLibrary.DataAccess;
 using BankLibrary.Controllers;
+using System.Text.RegularExpressions;
 
 namespace Views
 {
     public partial class pin_form : MaterialForm
     {
+        Regex pinRegex = new Regex(@"^[0-9]{6,6}$");
         account_controller accountcon = new account_controller();
         account account;
         client client;
-        int accoid;
+        //int accoid;
 
         public pin_form()
         {
@@ -40,21 +42,22 @@ namespace Views
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            if (accountcon.checkPin(txtPin.Text, this.account.accountid))
+            if (pinRegex.IsMatch(txtPin.Text))
             {
-                MessageBox.Show("Account Logged In!");
-                transac_form transact = new transac_form(this.account, this.client);
-                transact.Show();
-                this.Hide();
+                if (accountcon.checkPin(txtPin.Text, this.account.accountid))
+                {
+                    MessageBox.Show("Account Logged In!");
+                    transac_form transact = new transac_form(this.account, this.client);
+                    transact.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Account Login Failed!");
+                    txtPin.Text = "";
+                }
             }
-            else
-            {
-                MessageBox.Show("Account Login Failed!");
-                txtPin.Text = "";
-            }
-            /*transac_form transac = new transac_form();
-            transac.Show();
-            this.Dispose();*/
+            else MessageBox.Show("Invalid Pin Code!"); 
         }
 
         private void pin_form_FormClosed(object sender, FormClosedEventArgs e)

@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using BankLibrary.Controllers;
 using BankLibrary.DataAccess;
 using BankLibrary.Models;
+using System.Text.RegularExpressions;
 
 namespace Views
 {
@@ -18,7 +19,11 @@ namespace Views
     {
         client client;
         account_controller accountcon = new account_controller();
-
+        client_controller clientcon = new client_controller();
+        Regex pinRegex = new Regex(@"^[0-9]{6,6}$");
+        Regex passwordRegex = new Regex(@"^(?=.{6,})(?=.*[a-z])(?=.*[A-Z])(?=.*[\d]).*$");
+        Regex amountRegEX = new Regex(@"^[0-9]+(\.[0-9]{1,2})?$");
+        
         public create_account_form()
         {
             InitializeComponent();
@@ -28,26 +33,28 @@ namespace Views
         {
             InitializeComponent();
             this.client = client;
-            MessageBox.Show(client.email);
         }
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            if (txtPassword.Text == client.password && txtPin.Text == txtConfirmPin.Text)
+            if(pinRegex.IsMatch(txtPin.Text) && passwordRegex.IsMatch(txtPassword.Text) && amountRegEX.IsMatch(txtDeposit.Text))
             {
-                if (this.accountcon.createAccount(client.clientid, txtPin.Text, Convert.ToDecimal(txtDeposit.Text)))
+                if (this.clientcon.verifyPass(txtPassword.Text, client.clientid))
                 {
-                    MessageBox.Show("Success! Account Created.");
-                }
-                else MessageBox.Show("Failed registration.");
+                    if (this.accountcon.createAccount(client.clientid, txtPin.Text, Convert.ToDecimal(txtDeposit.Text)))
+                    {
+                        MessageBox.Show("Success! Account Created.");
+                    }
+                    else MessageBox.Show("Failed registration.");
 
-                this.Close();
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Wrong Password/Pin Code Mismatch.");
+                }
             }
-            else
-            {
-                MessageBox.Show("Wrong Password/Pin Code Mismatch.");
-            }
-           
+            else MessageBox.Show("Please check all field!");
         }
 
         private void btnClear_Click(object sender, EventArgs e)

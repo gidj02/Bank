@@ -39,12 +39,13 @@
             this.txtPin.Location = new System.Drawing.Point(121, 76);
             this.txtPin.MaxLength = 32767;
             this.txtPin.Name = "txtPin";
-            this.txtPin.PasswordChar = '*';
+            this.txtPin.PasswordChar = '●';
             this.txtPin.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtPin.SelectedText = "";
             this.txtPin.Size = new System.Drawing.Size(204, 23);
             this.txtPin.TabIndex = 6;
             this.txtPin.UseSelectable = true;
+            this.txtPin.UseSystemPasswordChar = true;
             // 
             // materialLabel1
             // 

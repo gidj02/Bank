@@ -45,7 +45,7 @@ namespace Views
             }
             else
             {
-                MessageBox.Show("Sorry!");
+                MessageBox.Show("Invalid username/password!");
             }
         }
 

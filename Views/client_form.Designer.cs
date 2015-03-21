@@ -56,16 +56,16 @@
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.metroTabPage3 = new MetroFramework.Controls.MetroTabPage();
-            this.txtDelete = new MaterialSkin.Controls.MaterialFlatButton();
+            this.btnDelete = new MaterialSkin.Controls.MaterialFlatButton();
             this.txtDelPass = new MetroFramework.Controls.MetroTextBox();
             this.txtDelCon = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel13 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel14 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel12 = new MetroFramework.Controls.MetroLabel();
             this.metroTabPage4 = new MetroFramework.Controls.MetroTabPage();
-            this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
+            this.txtOldPass = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel15 = new MetroFramework.Controls.MetroLabel();
-            this.materialFlatButton1 = new MaterialSkin.Controls.MaterialFlatButton();
+            this.btnChange = new MaterialSkin.Controls.MaterialFlatButton();
             this.txtPassword = new MetroFramework.Controls.MetroTextBox();
             this.txtConfirmPassword = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel10 = new MetroFramework.Controls.MetroLabel();
@@ -122,7 +122,7 @@
             this.metroTabControl1.Controls.Add(this.metroTabPage4);
             this.metroTabControl1.Location = new System.Drawing.Point(12, 110);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 0;
+            this.metroTabControl1.SelectedIndex = 3;
             this.metroTabControl1.Size = new System.Drawing.Size(499, 234);
             this.metroTabControl1.TabIndex = 4;
             this.metroTabControl1.UseSelectable = true;
@@ -170,7 +170,7 @@
             this.dgAccounts.EnableHeadersVisualStyles = false;
             this.dgAccounts.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.dgAccounts.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.dgAccounts.Location = new System.Drawing.Point(12, 15);
+            this.dgAccounts.Location = new System.Drawing.Point(128, 3);
             this.dgAccounts.MultiSelect = false;
             this.dgAccounts.Name = "dgAccounts";
             this.dgAccounts.ReadOnly = true;
@@ -183,10 +183,11 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgAccounts.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgAccounts.RowHeadersVisible = false;
             this.dgAccounts.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgAccounts.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgAccounts.Size = new System.Drawing.Size(466, 174);
-            this.dgAccounts.TabIndex = 2;
+            this.dgAccounts.Size = new System.Drawing.Size(272, 167);
+            this.dgAccounts.TabIndex = 3;
             this.dgAccounts.Theme = MetroFramework.MetroThemeStyle.Light;
             this.dgAccounts.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgAccounts_CellDoubleClick);
             // 
@@ -421,7 +422,7 @@
             // 
             // metroTabPage3
             // 
-            this.metroTabPage3.Controls.Add(this.txtDelete);
+            this.metroTabPage3.Controls.Add(this.btnDelete);
             this.metroTabPage3.Controls.Add(this.txtDelPass);
             this.metroTabPage3.Controls.Add(this.txtDelCon);
             this.metroTabPage3.Controls.Add(this.metroLabel13);
@@ -439,20 +440,21 @@
             this.metroTabPage3.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPage3.VerticalScrollbarSize = 10;
             // 
-            // txtDelete
+            // btnDelete
             // 
-            this.txtDelete.AutoSize = true;
-            this.txtDelete.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.txtDelete.Depth = 0;
-            this.txtDelete.Location = new System.Drawing.Point(208, 122);
-            this.txtDelete.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.txtDelete.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txtDelete.Name = "txtDelete";
-            this.txtDelete.Primary = false;
-            this.txtDelete.Size = new System.Drawing.Size(93, 36);
-            this.txtDelete.TabIndex = 48;
-            this.txtDelete.Text = "Deactivate";
-            this.txtDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.AutoSize = true;
+            this.btnDelete.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnDelete.Depth = 0;
+            this.btnDelete.Location = new System.Drawing.Point(208, 122);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnDelete.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Primary = false;
+            this.btnDelete.Size = new System.Drawing.Size(93, 36);
+            this.btnDelete.TabIndex = 48;
+            this.btnDelete.Text = "Deactivate";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // txtDelPass
             // 
@@ -460,12 +462,13 @@
             this.txtDelPass.Location = new System.Drawing.Point(223, 53);
             this.txtDelPass.MaxLength = 32767;
             this.txtDelPass.Name = "txtDelPass";
-            this.txtDelPass.PasswordChar = '\0';
+            this.txtDelPass.PasswordChar = '●';
             this.txtDelPass.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtDelPass.SelectedText = "";
             this.txtDelPass.Size = new System.Drawing.Size(199, 23);
             this.txtDelPass.TabIndex = 47;
             this.txtDelPass.UseSelectable = true;
+            this.txtDelPass.UseSystemPasswordChar = true;
             // 
             // txtDelCon
             // 
@@ -473,12 +476,13 @@
             this.txtDelCon.Location = new System.Drawing.Point(223, 90);
             this.txtDelCon.MaxLength = 32767;
             this.txtDelCon.Name = "txtDelCon";
-            this.txtDelCon.PasswordChar = '\0';
+            this.txtDelCon.PasswordChar = '●';
             this.txtDelCon.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtDelCon.SelectedText = "";
             this.txtDelCon.Size = new System.Drawing.Size(199, 23);
             this.txtDelCon.TabIndex = 46;
             this.txtDelCon.UseSelectable = true;
+            this.txtDelCon.UseSystemPasswordChar = true;
             // 
             // metroLabel13
             // 
@@ -510,9 +514,9 @@
             // 
             // metroTabPage4
             // 
-            this.metroTabPage4.Controls.Add(this.metroTextBox1);
+            this.metroTabPage4.Controls.Add(this.txtOldPass);
             this.metroTabPage4.Controls.Add(this.metroLabel15);
-            this.metroTabPage4.Controls.Add(this.materialFlatButton1);
+            this.metroTabPage4.Controls.Add(this.btnChange);
             this.metroTabPage4.Controls.Add(this.txtPassword);
             this.metroTabPage4.Controls.Add(this.txtConfirmPassword);
             this.metroTabPage4.Controls.Add(this.metroLabel10);
@@ -529,18 +533,19 @@
             this.metroTabPage4.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPage4.VerticalScrollbarSize = 10;
             // 
-            // metroTextBox1
+            // txtOldPass
             // 
-            this.metroTextBox1.Lines = new string[0];
-            this.metroTextBox1.Location = new System.Drawing.Point(214, 16);
-            this.metroTextBox1.MaxLength = 32767;
-            this.metroTextBox1.Name = "metroTextBox1";
-            this.metroTextBox1.PasswordChar = '\0';
-            this.metroTextBox1.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBox1.SelectedText = "";
-            this.metroTextBox1.Size = new System.Drawing.Size(199, 23);
-            this.metroTextBox1.TabIndex = 51;
-            this.metroTextBox1.UseSelectable = true;
+            this.txtOldPass.Lines = new string[0];
+            this.txtOldPass.Location = new System.Drawing.Point(214, 16);
+            this.txtOldPass.MaxLength = 32767;
+            this.txtOldPass.Name = "txtOldPass";
+            this.txtOldPass.PasswordChar = '●';
+            this.txtOldPass.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtOldPass.SelectedText = "";
+            this.txtOldPass.Size = new System.Drawing.Size(199, 23);
+            this.txtOldPass.TabIndex = 51;
+            this.txtOldPass.UseSelectable = true;
+            this.txtOldPass.UseSystemPasswordChar = true;
             // 
             // metroLabel15
             // 
@@ -551,20 +556,21 @@
             this.metroLabel15.TabIndex = 50;
             this.metroLabel15.Text = "Old Password:";
             // 
-            // materialFlatButton1
+            // btnChange
             // 
-            this.materialFlatButton1.AutoSize = true;
-            this.materialFlatButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialFlatButton1.Depth = 0;
-            this.materialFlatButton1.Location = new System.Drawing.Point(242, 149);
-            this.materialFlatButton1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.materialFlatButton1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialFlatButton1.Name = "materialFlatButton1";
-            this.materialFlatButton1.Primary = false;
-            this.materialFlatButton1.Size = new System.Drawing.Size(144, 36);
-            this.materialFlatButton1.TabIndex = 49;
-            this.materialFlatButton1.Text = "Change Password";
-            this.materialFlatButton1.UseVisualStyleBackColor = true;
+            this.btnChange.AutoSize = true;
+            this.btnChange.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnChange.Depth = 0;
+            this.btnChange.Location = new System.Drawing.Point(242, 149);
+            this.btnChange.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnChange.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnChange.Name = "btnChange";
+            this.btnChange.Primary = false;
+            this.btnChange.Size = new System.Drawing.Size(144, 36);
+            this.btnChange.TabIndex = 49;
+            this.btnChange.Text = "Change Password";
+            this.btnChange.UseVisualStyleBackColor = true;
+            this.btnChange.Click += new System.EventHandler(this.btnChange_Click);
             // 
             // txtPassword
             // 
@@ -572,12 +578,13 @@
             this.txtPassword.Location = new System.Drawing.Point(214, 73);
             this.txtPassword.MaxLength = 32767;
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.PasswordChar = '\0';
+            this.txtPassword.PasswordChar = '●';
             this.txtPassword.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtPassword.SelectedText = "";
             this.txtPassword.Size = new System.Drawing.Size(199, 23);
             this.txtPassword.TabIndex = 41;
             this.txtPassword.UseSelectable = true;
+            this.txtPassword.UseSystemPasswordChar = true;
             // 
             // txtConfirmPassword
             // 
@@ -585,12 +592,13 @@
             this.txtConfirmPassword.Location = new System.Drawing.Point(214, 107);
             this.txtConfirmPassword.MaxLength = 32767;
             this.txtConfirmPassword.Name = "txtConfirmPassword";
-            this.txtConfirmPassword.PasswordChar = '\0';
+            this.txtConfirmPassword.PasswordChar = '●';
             this.txtConfirmPassword.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtConfirmPassword.SelectedText = "";
             this.txtConfirmPassword.Size = new System.Drawing.Size(199, 23);
             this.txtConfirmPassword.TabIndex = 40;
             this.txtConfirmPassword.UseSelectable = true;
+            this.txtConfirmPassword.UseSystemPasswordChar = true;
             // 
             // metroLabel10
             // 
@@ -661,7 +669,6 @@
         private MetroFramework.Controls.MetroLink linkCreate;
         private MetroFramework.Controls.MetroTabControl metroTabControl1;
         private MetroFramework.Controls.MetroTabPage metroTabPage1;
-        private MetroFramework.Controls.MetroGrid dgAccounts;
         private MetroFramework.Controls.MetroTabPage metroTabPage2;
         private MetroFramework.Controls.MetroTabPage metroTabPage3;
         private MetroFramework.Controls.MetroTextBox txtAddress;
@@ -682,19 +689,20 @@
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroLabel metroLabel11;
         private MetroFramework.Controls.MetroLabel metroLabel12;
-        private MaterialSkin.Controls.MaterialFlatButton txtDelete;
+        private MaterialSkin.Controls.MaterialFlatButton btnDelete;
         private MetroFramework.Controls.MetroTextBox txtDelPass;
         private MetroFramework.Controls.MetroTextBox txtDelCon;
         private MetroFramework.Controls.MetroLabel metroLabel13;
         private MetroFramework.Controls.MetroLabel metroLabel14;
         private MetroFramework.Controls.MetroTabPage metroTabPage4;
-        private MetroFramework.Controls.MetroTextBox metroTextBox1;
+        private MetroFramework.Controls.MetroTextBox txtOldPass;
         private MetroFramework.Controls.MetroLabel metroLabel15;
-        private MaterialSkin.Controls.MaterialFlatButton materialFlatButton1;
+        private MaterialSkin.Controls.MaterialFlatButton btnChange;
         private MetroFramework.Controls.MetroTextBox txtPassword;
         private MetroFramework.Controls.MetroTextBox txtConfirmPassword;
         private MetroFramework.Controls.MetroLabel metroLabel10;
         private MetroFramework.Controls.MetroLabel metroLabel9;
         private MetroFramework.Controls.MetroButton btnLogout;
+        private MetroFramework.Controls.MetroGrid dgAccounts;
     }
 }

@@ -47,12 +47,13 @@
             this.txtPassword.Location = new System.Drawing.Point(159, 181);
             this.txtPassword.MaxLength = 32767;
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.PasswordChar = '\0';
+            this.txtPassword.PasswordChar = '●';
             this.txtPassword.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtPassword.SelectedText = "";
             this.txtPassword.Size = new System.Drawing.Size(199, 23);
             this.txtPassword.TabIndex = 14;
             this.txtPassword.UseSelectable = true;
+            this.txtPassword.UseSystemPasswordChar = true;
             // 
             // txtConfirmPin
             // 
@@ -60,12 +61,13 @@
             this.txtConfirmPin.Location = new System.Drawing.Point(159, 149);
             this.txtConfirmPin.MaxLength = 32767;
             this.txtConfirmPin.Name = "txtConfirmPin";
-            this.txtConfirmPin.PasswordChar = '\0';
+            this.txtConfirmPin.PasswordChar = '●';
             this.txtConfirmPin.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtConfirmPin.SelectedText = "";
             this.txtConfirmPin.Size = new System.Drawing.Size(199, 23);
             this.txtConfirmPin.TabIndex = 13;
             this.txtConfirmPin.UseSelectable = true;
+            this.txtConfirmPin.UseSystemPasswordChar = true;
             // 
             // txtPin
             // 
@@ -73,12 +75,13 @@
             this.txtPin.Location = new System.Drawing.Point(159, 118);
             this.txtPin.MaxLength = 32767;
             this.txtPin.Name = "txtPin";
-            this.txtPin.PasswordChar = '\0';
+            this.txtPin.PasswordChar = '●';
             this.txtPin.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtPin.SelectedText = "";
             this.txtPin.Size = new System.Drawing.Size(199, 23);
             this.txtPin.TabIndex = 12;
             this.txtPin.UseSelectable = true;
+            this.txtPin.UseSystemPasswordChar = true;
             // 
             // metroLabel4
             // 

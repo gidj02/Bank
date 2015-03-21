@@ -45,6 +45,9 @@
     <Reference Include="MetroFramework.Fonts">
       <HintPath>..\..\..\..\winforms-modernui-master\DLL\MetroFramework.Fonts.dll</HintPath>
     </Reference>
+    <Reference Include="Syncfusion.Core, Version=12.4450.0.24, Culture=neutral, PublicKeyToken=632609b4d040f6b4" />
+    <Reference Include="Syncfusion.Maps.Windows, Version=12.4450.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.SfBarcode.Windows, Version=12.4450.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />

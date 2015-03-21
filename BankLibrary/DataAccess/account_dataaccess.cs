@@ -14,7 +14,7 @@ namespace BankLibrary.DataAccess
         private static string connStr = @"Data Source=.; Integrated Security=TRUE; Initial Catalog= DBBank;";
         public SqlConnection conn = new SqlConnection(connStr);
         account account;
-        
+
 
         public void setConnection()
         {
@@ -125,7 +125,7 @@ namespace BankLibrary.DataAccess
                 {
                     return true;
                 }
-          
+
                 return false;
             }
             catch (Exception e)
@@ -165,6 +165,101 @@ namespace BankLibrary.DataAccess
                 setConnection();
             }
         }
-    }
 
+     
+
+        public bool changePin(int accountid, string oldPin, string newPin)
+        {
+            try
+            {
+                setConnection();
+                using (SqlCommand cmd = new SqlCommand("changePin", conn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    cmd.Parameters.Add("@accountId", SqlDbType.Int).Value = accountid;
+                    cmd.Parameters.Add("@oldPin", SqlDbType.NVarChar).Value = oldPin;
+                    cmd.Parameters.Add("@newPin", SqlDbType.NVarChar).Value = newPin;
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message.ToString());
+            }
+            finally
+            {
+                setConnection();
+            }
+
+            return true;
+        }
+         
+
+        public bool deleteAcc(int accountid, string pin)
+        {
+            try
+            {
+                setConnection();
+                using (SqlCommand cmd = new SqlCommand("deleteAccount", conn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    cmd.Parameters.Add("@accountId", SqlDbType.Int).Value = accountid;
+                    cmd.Parameters.Add("@pin", SqlDbType.NVarChar).Value = pin;
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message.ToString());
+            }
+            finally
+            {
+                setConnection();
+            }
+
+            return true;
+        }
+
+        public bool verifyPin(string pin, int accoid)
+        {
+            int value = 0;
+            setConnection();
+            try
+            {
+                using (SqlCommand cmd = new SqlCommand("verifyPin", conn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    cmd.Parameters.Add("@pin", SqlDbType.NVarChar).Value = pin;
+                    cmd.Parameters.Add("@accountId", SqlDbType.Int).Value = accoid;
+                    cmd.ExecuteNonQuery();
+
+                    SqlParameter ret = new SqlParameter("@return", SqlDbType.Int);
+                    ret.Direction = ParameterDirection.ReturnValue;
+                    cmd.Parameters.Add(ret);
+                    cmd.ExecuteNonQuery();
+                    value = Convert.ToInt32(ret.Value);
+                }
+            }
+            catch (Exception)
+            {
+                throw new Exception("Error in Verify Pin");
+            }
+            finally
+            {
+                setConnection();
+            }
+
+            if (value == 1)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+    }
 }

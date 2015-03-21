@@ -33,9 +33,23 @@ namespace BankLibrary.Controllers
             return this.account.checkPin(pincode, accoid);
         }
 
-        public bool createAccount(int clientid, string pin, decimal deposit)
+        public bool createAccount( int clientid, string pin, decimal deposit)
         {
             return this.account.createAccount(clientid, pin, deposit);
+        }
+
+        public bool changePin(int clientid, string oldPin, string newPin)
+        {
+            return this.account.changePin(clientid, oldPin, newPin);
+        }
+        public bool deleteAcc(int clientid, string pin)
+        {
+            return this.account.deleteAcc(clientid, pin);
+        }
+
+        public bool verifyPin(string pin, int accoid)
+        {
+            return this.account.verifyPin(pin, accoid);
         }
     }
 }

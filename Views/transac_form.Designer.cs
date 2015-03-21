@@ -28,10 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(transac_form));
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.lblBalance = new MetroFramework.Controls.MetroLabel();
             this.lblLoan = new MetroFramework.Controls.MetroLabel();
             this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
+            this.metroTabPage6 = new MetroFramework.Controls.MetroTabPage();
+            this.dgLogs = new MetroFramework.Controls.MetroGrid();
             this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
             this.btnWithdraw = new MaterialSkin.Controls.MaterialFlatButton();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
@@ -62,7 +68,11 @@
             this.txtDelPin = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
             this.btnChangeAcc = new MetroFramework.Controls.MetroButton();
+            this.metroTile1 = new MetroFramework.Controls.MetroTile();
+            this.metroTile2 = new MetroFramework.Controls.MetroTile();
             this.metroTabControl1.SuspendLayout();
+            this.metroTabPage6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgLogs)).BeginInit();
             this.metroTabPage1.SuspendLayout();
             this.metroTabPage2.SuspendLayout();
             this.metroTabPage3.SuspendLayout();
@@ -85,7 +95,7 @@
             // 
             this.lblBalance.AutoSize = true;
             this.lblBalance.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.lblBalance.Location = new System.Drawing.Point(273, 69);
+            this.lblBalance.Location = new System.Drawing.Point(273, 73);
             this.lblBalance.Name = "lblBalance";
             this.lblBalance.Size = new System.Drawing.Size(164, 19);
             this.lblBalance.TabIndex = 5;
@@ -95,7 +105,7 @@
             // 
             this.lblLoan.AutoSize = true;
             this.lblLoan.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.lblLoan.Location = new System.Drawing.Point(273, 94);
+            this.lblLoan.Location = new System.Drawing.Point(273, 103);
             this.lblLoan.Name = "lblLoan";
             this.lblLoan.Size = new System.Drawing.Size(148, 19);
             this.lblLoan.TabIndex = 6;
@@ -103,17 +113,81 @@
             // 
             // metroTabControl1
             // 
+            this.metroTabControl1.Controls.Add(this.metroTabPage3);
+            this.metroTabControl1.Controls.Add(this.metroTabPage6);
             this.metroTabControl1.Controls.Add(this.metroTabPage1);
             this.metroTabControl1.Controls.Add(this.metroTabPage2);
-            this.metroTabControl1.Controls.Add(this.metroTabPage3);
             this.metroTabControl1.Controls.Add(this.metroTabPage4);
             this.metroTabControl1.Controls.Add(this.metroTabPage5);
             this.metroTabControl1.Location = new System.Drawing.Point(12, 126);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 2;
+            this.metroTabControl1.SelectedIndex = 3;
             this.metroTabControl1.Size = new System.Drawing.Size(518, 234);
             this.metroTabControl1.TabIndex = 7;
             this.metroTabControl1.UseSelectable = true;
+            // 
+            // metroTabPage6
+            // 
+            this.metroTabPage6.Controls.Add(this.dgLogs);
+            this.metroTabPage6.HorizontalScrollbarBarColor = true;
+            this.metroTabPage6.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroTabPage6.HorizontalScrollbarSize = 10;
+            this.metroTabPage6.Location = new System.Drawing.Point(4, 38);
+            this.metroTabPage6.Name = "metroTabPage6";
+            this.metroTabPage6.Size = new System.Drawing.Size(510, 192);
+            this.metroTabPage6.TabIndex = 5;
+            this.metroTabPage6.Text = "Transaction Logs";
+            this.metroTabPage6.VerticalScrollbarBarColor = true;
+            this.metroTabPage6.VerticalScrollbarHighlightOnWheel = false;
+            this.metroTabPage6.VerticalScrollbarSize = 10;
+            // 
+            // dgLogs
+            // 
+            this.dgLogs.AllowUserToResizeRows = false;
+            this.dgLogs.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgLogs.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.dgLogs.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgLogs.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dgLogs.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgLogs.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgLogs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgLogs.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgLogs.EnableHeadersVisualStyles = false;
+            this.dgLogs.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.dgLogs.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.dgLogs.Location = new System.Drawing.Point(3, 3);
+            this.dgLogs.MultiSelect = false;
+            this.dgLogs.Name = "dgLogs";
+            this.dgLogs.ReadOnly = true;
+            this.dgLogs.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgLogs.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgLogs.RowHeadersVisible = false;
+            this.dgLogs.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgLogs.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgLogs.Size = new System.Drawing.Size(507, 167);
+            this.dgLogs.TabIndex = 4;
+            this.dgLogs.Theme = MetroFramework.MetroThemeStyle.Light;
             // 
             // metroTabPage1
             // 
@@ -374,6 +448,7 @@
             this.btnChangePin.TabIndex = 49;
             this.btnChangePin.Text = "Change Pin";
             this.btnChangePin.UseVisualStyleBackColor = true;
+            this.btnChangePin.Click += new System.EventHandler(this.btnChangePin_Click);
             // 
             // txtNewPin
             // 
@@ -452,6 +527,7 @@
             this.btnDeleteAccount.TabIndex = 56;
             this.btnDeleteAccount.Text = "DELETE ACCOUNT";
             this.btnDeleteAccount.UseVisualStyleBackColor = true;
+            this.btnDeleteAccount.Click += new System.EventHandler(this.btnDeleteAccount_Click);
             // 
             // txtDelPass
             // 
@@ -459,12 +535,13 @@
             this.txtDelPass.Location = new System.Drawing.Point(206, 80);
             this.txtDelPass.MaxLength = 32767;
             this.txtDelPass.Name = "txtDelPass";
-            this.txtDelPass.PasswordChar = '*';
+            this.txtDelPass.PasswordChar = '●';
             this.txtDelPass.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtDelPass.SelectedText = "";
             this.txtDelPass.Size = new System.Drawing.Size(199, 23);
             this.txtDelPass.TabIndex = 55;
             this.txtDelPass.UseSelectable = true;
+            this.txtDelPass.UseSystemPasswordChar = true;
             // 
             // metroLabel8
             // 
@@ -481,12 +558,13 @@
             this.txtDelPin.Location = new System.Drawing.Point(206, 51);
             this.txtDelPin.MaxLength = 32767;
             this.txtDelPin.Name = "txtDelPin";
-            this.txtDelPin.PasswordChar = '*';
+            this.txtDelPin.PasswordChar = '●';
             this.txtDelPin.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtDelPin.SelectedText = "";
             this.txtDelPin.Size = new System.Drawing.Size(199, 23);
             this.txtDelPin.TabIndex = 53;
             this.txtDelPin.UseSelectable = true;
+            this.txtDelPin.UseSystemPasswordChar = true;
             // 
             // metroLabel7
             // 
@@ -509,12 +587,40 @@
             this.btnChangeAcc.UseSelectable = true;
             this.btnChangeAcc.Click += new System.EventHandler(this.btnChangeAcc_Click);
             // 
+            // metroTile1
+            // 
+            this.metroTile1.ActiveControl = null;
+            this.metroTile1.BackColor = System.Drawing.Color.Transparent;
+            this.metroTile1.Location = new System.Drawing.Point(249, 67);
+            this.metroTile1.Name = "metroTile1";
+            this.metroTile1.Size = new System.Drawing.Size(29, 31);
+            this.metroTile1.TabIndex = 55;
+            this.metroTile1.TileImage = ((System.Drawing.Image)(resources.GetObject("metroTile1.TileImage")));
+            this.metroTile1.UseCustomBackColor = true;
+            this.metroTile1.UseSelectable = true;
+            this.metroTile1.UseTileImage = true;
+            // 
+            // metroTile2
+            // 
+            this.metroTile2.ActiveControl = null;
+            this.metroTile2.BackColor = System.Drawing.Color.Transparent;
+            this.metroTile2.Location = new System.Drawing.Point(246, 98);
+            this.metroTile2.Name = "metroTile2";
+            this.metroTile2.Size = new System.Drawing.Size(29, 31);
+            this.metroTile2.TabIndex = 56;
+            this.metroTile2.TileImage = ((System.Drawing.Image)(resources.GetObject("metroTile2.TileImage")));
+            this.metroTile2.UseCustomBackColor = true;
+            this.metroTile2.UseSelectable = true;
+            this.metroTile2.UseTileImage = true;
+            // 
             // transac_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(118)))), ((int)(((byte)(135)))));
             this.ClientSize = new System.Drawing.Size(546, 375);
+            this.Controls.Add(this.metroTile2);
+            this.Controls.Add(this.metroTile1);
             this.Controls.Add(this.btnChangeAcc);
             this.Controls.Add(this.metroTabControl1);
             this.Controls.Add(this.lblLoan);
@@ -525,8 +631,11 @@
             this.Sizable = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Banking System";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.transac_form_FormClosed);
             this.Load += new System.EventHandler(this.transac_form_Load);
             this.metroTabControl1.ResumeLayout(false);
+            this.metroTabPage6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgLogs)).EndInit();
             this.metroTabPage1.ResumeLayout(false);
             this.metroTabPage1.PerformLayout();
             this.metroTabPage2.ResumeLayout(false);
@@ -578,6 +687,10 @@
         private MetroFramework.Controls.MetroLabel metroLabel7;
         private MaterialSkin.Controls.MaterialFlatButton btnDeleteAccount;
         private MetroFramework.Controls.MetroButton btnChangeAcc;
+        private MetroFramework.Controls.MetroTabPage metroTabPage6;
+        private MetroFramework.Controls.MetroGrid dgLogs;
+        private MetroFramework.Controls.MetroTile metroTile1;
+        private MetroFramework.Controls.MetroTile metroTile2;
 
     }
 }

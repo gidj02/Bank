@@ -16,6 +16,5 @@ namespace BankLibrary.Models
         public string contact { get; set; }
         public string email { get; set; }
         public string username { get; set; }
-        public string password { get; set; }
     }
 }

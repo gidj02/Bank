@@ -176,5 +176,30 @@ namespace BankLibrary.DataAccess
                 return false;
             }
         }
+
+        public DataTable viewTransactions(int accoid)
+        {
+            DataTable dt = new DataTable();
+
+            try
+            {
+                setConnection();
+                SqlCommand cmd = new SqlCommand("viewTransactions", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add("@accountId", SqlDbType.Int).Value = accoid;
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+            }
+            catch (Exception)
+            {
+                throw new Exception("error selection");
+            }
+            finally
+            {
+                setConnection();
+            }
+
+            return dt;
+        }
     }
 }

@@ -30,6 +30,21 @@ namespace BankLibrary.Controllers
         {
             return this.clientda.updateClient(clientid,firstname, middlename, lastname, address, number, email, username);
         }
+
+        public bool deleteClient(int clientid, string password)
+        {
+            return this.clientda.deleteClient(clientid, password);
+        }
+
+        public bool changePass(int clientid, string oldPass, string newPass)
+        {
+            return this.clientda.changePass(clientid, oldPass, newPass);
+        }
+
+        public bool verifyPass(string pasword, int clientid)
+        {
+            return this.clientda.verifyPass(pasword, clientid);
+        }
     }
 }
 

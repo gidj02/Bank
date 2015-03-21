@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using BankLibrary.DataAccess;
 using BankLibrary.Models;
+using System.Data;
 
 namespace BankLibrary.Controllers
 {
@@ -35,6 +36,11 @@ namespace BankLibrary.Controllers
         public bool clientEncash(int accoid, decimal amount)
         {
             return this.trans.clientEncash(accoid, amount);
+        }
+
+        public DataTable viewTransactions(int accoid)
+        {
+            return this.trans.viewTransactions(accoid);
         }
 
     }

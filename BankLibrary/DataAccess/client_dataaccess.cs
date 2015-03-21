@@ -95,8 +95,7 @@ namespace BankLibrary.DataAccess
                         address = reader["address"].ToString(),
                         email = reader["email"].ToString(),
                         contact = reader["contactNumber"].ToString(),
-                        username = reader["userName"].ToString(),
-                        password = reader["password"].ToString()
+                        username = reader["userName"].ToString()
                     };
                     client = c;
                 }
@@ -180,23 +179,58 @@ namespace BankLibrary.DataAccess
             return true;
         }
 
-        /*public bool deleteClient()
+        public bool deleteClient(int clientid, string password)
         {
+            int value = 0;
             try
             {
                 setConnection();
-                using (SqlCommand cmd = new SqlCommand("updateClient", conn))
+                using (SqlCommand cmd = new SqlCommand("deleteClient", conn))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
 
                     cmd.Parameters.Add("@clientId", SqlDbType.Int).Value = clientid;
-                    cmd.Parameters.Add("@firstname", SqlDbType.NVarChar).Value = firstname;
-                    cmd.Parameters.Add("@middlename", SqlDbType.NVarChar).Value = middlename;
-                    cmd.Parameters.Add("@lastname", SqlDbType.NVarChar).Value = lastname;
-                    cmd.Parameters.Add("@address", SqlDbType.NVarChar).Value = address;
-                    cmd.Parameters.Add("@contactNumber", SqlDbType.NVarChar).Value = number;
-                    cmd.Parameters.Add("@email", SqlDbType.NVarChar).Value = email;
-                    cmd.Parameters.Add("@username", SqlDbType.NVarChar).Value = username;
+                    cmd.Parameters.Add("@password", SqlDbType.NVarChar).Value = password;
+                    cmd.ExecuteNonQuery();
+
+                    SqlParameter ret = new SqlParameter("@return", SqlDbType.Int);
+                    ret.Direction = ParameterDirection.ReturnValue;
+                    cmd.Parameters.Add(ret);
+                    cmd.ExecuteNonQuery();
+                    value = Convert.ToInt32(ret.Value);
+                }
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message.ToString());
+            }
+            finally
+            {
+                setConnection();
+            }
+            if (value == 1)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+            
+        }
+
+        public bool changePass(int clientid, string oldPass, string newPass)
+        {
+            try
+            {
+                setConnection();
+                using (SqlCommand cmd = new SqlCommand("changePassword", conn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    cmd.Parameters.Add("@clientId", SqlDbType.Int).Value = clientid;
+                    cmd.Parameters.Add("@oldPassword", SqlDbType.NVarChar).Value = oldPass;
+                    cmd.Parameters.Add("@newPassword", SqlDbType.NVarChar).Value = newPass;
                     cmd.ExecuteNonQuery();
                 }
             }
@@ -210,6 +244,46 @@ namespace BankLibrary.DataAccess
             }
 
             return true;
-        }*/
+        }
+
+        public bool verifyPass(string password, int clientid)
+        {
+            int value = 0;
+            setConnection();
+            try
+            {
+                using (SqlCommand cmd = new SqlCommand("verifyPass", conn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    cmd.Parameters.Add("@password", SqlDbType.NVarChar).Value = password;
+                    cmd.Parameters.Add("@clientId", SqlDbType.Int).Value = clientid;
+                    cmd.ExecuteNonQuery();
+
+                    SqlParameter ret = new SqlParameter("@return", SqlDbType.Int);
+                    ret.Direction = ParameterDirection.ReturnValue;
+                    cmd.Parameters.Add(ret);
+                    cmd.ExecuteNonQuery();
+                    value = Convert.ToInt32(ret.Value);
+                }
+            }
+            catch (Exception x)
+            {
+                throw new Exception(x.Message.ToString());
+            }
+            finally
+            {
+                setConnection();
+            }
+
+            if (value == 1)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }
